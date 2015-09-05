@@ -8,7 +8,8 @@
 
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface RegisterView : UIView
-
+@property(nonatomic, copy) NSString *placeholder;
 @end

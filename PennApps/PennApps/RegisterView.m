@@ -34,32 +34,53 @@
 -(void)createSubviews{
     self.backgroundColor = [UIColor orangeColor];
     self.registrationLabel = [[UILabel alloc] init];
-    self.registrationLabel.backgroundColor = [UIColor redColor];
     self.registrationLabel.numberOfLines = 0;
     self.registrationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.registrationLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.registrationLabel];
+    self.registrationLabel.text = @"Register Here";
+    self.registrationLabel.textAlignment = NSTextAlignmentCenter;
     
     
     self.name = [[UITextField alloc] init];
-    self.name.backgroundColor = [UIColor greenColor];
+    //self.name.backgroundColor = [UIColor greenColor];
     self.name.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.name];
+    self.name.layer.borderColor = [[UIColor redColor]CGColor];
+    self.name.layer.cornerRadius = 10.0;
+    self.name.layer.borderWidth = 2.0;
+    self.name.tag = 1;
+    
     
     self.Specialty = [[UITextField alloc] init];
     self.Specialty.backgroundColor = [UIColor blueColor];
     self.Specialty.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.Specialty];
+    self.Specialty.layer.borderColor = [[UIColor redColor]CGColor];
+    self.Specialty.layer.cornerRadius = 10.0;
+    self.Specialty.layer.borderWidth = 2.0;
+    self.Specialty.tag = 2;
+
 
     self.userName = [[UITextField alloc] init];
     self.userName.backgroundColor = [UIColor blueColor];
     self.userName.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.userName];
+    self.userName.layer.borderColor = [[UIColor redColor]CGColor];
+    self.userName.layer.cornerRadius = 10.0;
+    self.userName.layer.borderWidth = 2.0;
+    self.userName.tag = 3;
+
     
     self.password = [[UITextField alloc] init];
     self.password.backgroundColor = [UIColor blueColor];
     self.password.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.password];
+    self.password.layer.borderColor = [[UIColor redColor]CGColor];
+    self.password.layer.cornerRadius = 10.0;
+    self.password.layer.borderWidth = 2.0;
+    self.password.tag = 4;
+
 
     self.submitButton = [[UIButton alloc] init];
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
@@ -92,6 +113,22 @@
     //Vertical
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(>=50)-[registrationLabel(22)]-[name]-10-[Specialty]-[userName]-[password]-[submitButton]-(>=50)-|" options:0 metrics:nil views:@{@"registrationLabel" : self.registrationLabel, @"name" : self.name, @"Specialty" : self.Specialty, @"userName" : self.userName, @"password" : self.password, @"submitButton" : self.submitButton}]];
     
+}
+
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if(textField.tag == 1){
+        textField.placeholder = @"MyPlaceholderText1";   //custom placeholders
+    }
+    
+    else if (textField.tag == 2){
+        textField.placeholder = @"MyPlaceholderText2"; //custom placeholders
+    }
+    
+    else if (textField.tag == 3){
+        textField.placeholder = @"MyPlaceholderText3"; //custom placeholders
+    }
 }
 
 -(void)submitButtonPressed{

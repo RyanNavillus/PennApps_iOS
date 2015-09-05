@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "ViewController.h"
+#import "ViewController.h"
 #import "InboxView.h"
 
 @interface AppDelegate ()
@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    InboxView *vc = [[InboxView alloc] init];
+    ViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = vc;
     return YES;
 }

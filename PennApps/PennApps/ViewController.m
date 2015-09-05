@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     
-    self.view = [[InboxView alloc] init];
+    self.view = [[RegisterView alloc] init];
 }
 
 
