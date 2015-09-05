@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "loginView.h"
+#import "RegisterView.h"
 
 @interface ViewController ()
 

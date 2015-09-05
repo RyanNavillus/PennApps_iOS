@@ -107,4 +107,35 @@ static Api* kSharedApi;
     
 }
 
+-(void)createNewMessage:(NSString *)message FromSenderType:(NSUInteger)senderType WithCID:(NSUInteger)cid{
+    // 1
+    NSURL *dataUrl = [NSURL URLWithString:@"/addmessage"];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    // 2
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"POST";
+    
+    // 3
+    NSDictionary *dictionary = @{@"cid": [NSNumber numberWithInteger: cid], @"stype" : [NSNumber numberWithInteger:senderType], @"message" : message};
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
+                                                   options:kNilOptions error:&error];
+    
+    if (!error) {
+        // 4
+        NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
+                                                                   fromData:data completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+                                                                       NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                                                       NSLog(@"%@", myString);
+                                                                   }];
+        
+        // 5
+        [uploadTask resume];
+    }
+    
+}
+
 @end
