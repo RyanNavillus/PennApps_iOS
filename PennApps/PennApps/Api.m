@@ -100,9 +100,11 @@ static Api* kSharedApi;
     if (!error) {
         // 4
         NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
+            }
         }];
         
         // 5
@@ -141,6 +143,24 @@ static Api* kSharedApi;
         // 5
         [dataTask resume];
     }
+    
+}
+
+-(void)getConversationList{
+    // 1
+    NSString *dataUrl = @"conversations";
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    // 2
+    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if(data){
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableContainers
+                                                                   error:&error];
+            //store value for "cid" key in Core Data
+        }
+    }];
+    
+    [downloadTask resume];
     
 }
 

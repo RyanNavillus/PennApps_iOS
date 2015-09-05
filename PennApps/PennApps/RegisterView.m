@@ -109,7 +109,7 @@
     
     
     //Vertical
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(>=50)-[registrationLabel(22)]-[name]-10-[Specialty]-[userName]-[password]-[submitButton]-(>=50)-|" options:0 metrics:nil views:@{@"registrationLabel" : self.registrationLabel, @"name" : self.name, @"Specialty" : self.Specialty, @"userName" : self.userName, @"password" : self.password, @"submitButton" : self.submitButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[registrationLabel(22)]-[name]-10-[Specialty]-[userName]-[password]-[submitButton]-(>=100)-|" options:0 metrics:nil views:@{@"registrationLabel" : self.registrationLabel, @"name" : self.name, @"Specialty" : self.Specialty, @"userName" : self.userName, @"password" : self.password, @"submitButton" : self.submitButton}]];
     
 }
 
