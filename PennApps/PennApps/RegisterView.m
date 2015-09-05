@@ -53,7 +53,6 @@
     
     
     self.name = [[UITextField alloc] init];
-    //self.name.backgroundColor = [UIColor greenColor];
     self.name.translatesAutoresizingMaskIntoConstraints = NO;
     self.name.placeholder = @"Name";
     self.name.textAlignment = NSTextAlignmentCenter;
@@ -82,7 +81,7 @@
 
     self.userName = [[UITextField alloc] init];
     self.userName.translatesAutoresizingMaskIntoConstraints = NO;
-    self.userName.placeholder = @"Password";
+    self.userName.placeholder = @"User Name";
     self.userName.textAlignment = NSTextAlignmentCenter;
     self.userName.layer.borderColor = [[UIColor colorWithRed:228/255.0 green:61/255.0 blue:61/255.0 alpha:1.0]CGColor];
     self.userName.layer.cornerRadius = 5.0;
@@ -121,7 +120,7 @@
     [self.submitButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.f]];
     self.submitButton.layer.masksToBounds = NO;
     self.submitButton.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.submitButton.layer.shadowOpacity = 0.6;
+    self.submitButton.layer.shadowOpacity = 0.4;
     self.submitButton.layer.shadowRadius = 3.f;
     self.submitButton.layer.shadowOffset = CGSizeMake(2.f, 2.f);
     [self addSubview:self.submitButton];
@@ -134,7 +133,6 @@
     //Horizontal
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.logoView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.logoView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.logoView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.f]];
-
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.registrationLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.name attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.specialty attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];

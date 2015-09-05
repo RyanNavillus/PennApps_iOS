@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     
-    self.view = [[RegisterView alloc] init];
+    self.view = [[loginView alloc] init];
 }
 
 

@@ -132,17 +132,72 @@ static Api* kSharedApi;
     
 }
 
--(void)getConversationList{
+-(void)getMessagesStartingWith:(NSUInteger)start EndingWith:(NSUInteger)end WithCID:(NSUInteger)cid{
+
+    // 1
+    NSURL *dataUrl = [NSURL URLWithString:@"register"];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    // 2
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"POST";
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    // 3
+    NSDictionary *dictionary = @{@"start": [NSNumber numberWithInteger:start] , @"end" :  [NSNumber numberWithInteger:end], @"cid" : [NSNumber numberWithInteger:cid]};
+    NSError *error = nil;
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+    
+    
+    if (!error) {
+        // 4
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                     options:NSJSONReadingMutableContainers
+                                                                       error:&error];
+                
+            }
+        }];
+        
+        // 5
+        [dataTask resume];
+    }
+    
+
+    
+    
+    
+}
+
+-(void)getConversationListWithAmount:(NSUInteger)amount andUser:(NSUInteger)uid{
     // 1
     NSString *dataUrl = @"conversationlist";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     // 2
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    request.HTTPMethod = @"POST";
+    
+    // 3
+    NSDictionary *dictionary = @{@"amount": [NSNumber numberWithInteger: amount], @"uid" : [NSNumber numberWithInteger:uid]};
+    NSError *error = nil;
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+
+    NSURLSessionDataTask *downloadTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if(data){
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
-            //store value for "cid" key in Core Data
+            //messages for UITableView
             
             
         }
