@@ -17,7 +17,12 @@
 		3BD2173E1B9AB4E800C85ED4 /* PennAppsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2173D1B9AB4E800C85ED4 /* PennAppsUITests.m */; };
 		3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2174C1B9AB52B00C85ED4 /* loginView.m */; settings = {ASSET_TAGS = (); }; };
 		3BD217511B9ABEC500C85ED4 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217501B9ABEC500C85ED4 /* Api.m */; settings = {ASSET_TAGS = (); }; };
+<<<<<<< HEAD
 		3BD217581B9B320400C85ED4 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217571B9B320400C85ED4 /* Doctor.m */; settings = {ASSET_TAGS = (); }; };
+=======
+		866CFDD21B9B232C00B23536 /* InboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD11B9B232B00B23536 /* InboxView.m */; settings = {ASSET_TAGS = (); }; };
+		866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD51B9B290600B23536 /* TableCustomCell.m */; settings = {ASSET_TAGS = (); }; };
+>>>>>>> 0544ba132adb516d7af99c2b1c9ad47a71c0a460
 		86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B6821B9AD1930045D0CB /* RegisterView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -60,8 +65,15 @@
 		3BD2174F1B9ABEC500C85ED4 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		3BD217501B9ABEC500C85ED4 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		3BD217541B9AD4DF00C85ED4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3BD217561B9B320400C85ED4 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		3BD217571B9B320400C85ED4 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+=======
+		866CFDD11B9B232B00B23536 /* InboxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxView.m; sourceTree = "<group>"; };
+		866CFDD31B9B235E00B23536 /* InboxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxView.h; sourceTree = "<group>"; };
+		866CFDD41B9B286400B23536 /* TableCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCustomCell.h; sourceTree = "<group>"; };
+		866CFDD51B9B290600B23536 /* TableCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCustomCell.m; sourceTree = "<group>"; };
+>>>>>>> 0544ba132adb516d7af99c2b1c9ad47a71c0a460
 		86F9B6821B9AD1930045D0CB /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		86F9B6841B9AD1B60045D0CB /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +139,10 @@
 				3BD217571B9B320400C85ED4 /* Doctor.m */,
 				3BD2174F1B9ABEC500C85ED4 /* Api.h */,
 				3BD217501B9ABEC500C85ED4 /* Api.m */,
+				866CFDD41B9B286400B23536 /* TableCustomCell.h */,
+				866CFDD51B9B290600B23536 /* TableCustomCell.m */,
+				866CFDD11B9B232B00B23536 /* InboxView.m */,
+				866CFDD31B9B235E00B23536 /* InboxView.h */,
 				3BD217211B9AB4E800C85ED4 /* Main.storyboard */,
 				3BD217241B9AB4E800C85ED4 /* Assets.xcassets */,
 				3BD217261B9AB4E800C85ED4 /* LaunchScreen.storyboard */,
@@ -298,6 +314,8 @@
 				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
 				3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */,
 				3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */,
+				866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */,
+				866CFDD21B9B232C00B23536 /* InboxView.m in Sources */,
 				86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

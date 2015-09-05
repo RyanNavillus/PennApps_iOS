@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "loginView.h"
 #import "RegisterView.h"
+#import "InboxView.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    self.view = [[loginView alloc] init];
+    
+    self.view = [[InboxView alloc] init];
 }
 
 
