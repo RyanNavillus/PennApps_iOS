@@ -99,9 +99,9 @@ static Api* kSharedApi;
     
 }
 
--(void)createNewMessage:(NSString *)message FromSenderType:(NSUInteger)senderType WithCID:(NSUInteger)cid{
+-(void)createNewMessage:(NSString *)message FromSenderType:(NSString *)senderType WithCID:(NSString *)cid{
     // 1
-    NSURL *dataUrl = [NSURL URLWithString:@"/addmessage"];
+    NSURL *dataUrl = [NSURL URLWithString:@"addmessage"];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
@@ -113,7 +113,7 @@ static Api* kSharedApi;
     request.HTTPMethod = @"POST";
     
     // 3
-    NSDictionary *dictionary = @{@"cid": [NSNumber numberWithInteger: cid], @"stype" : [NSNumber numberWithInteger:senderType], @"message" : message};
+    NSDictionary *dictionary = @{@"cid": cid, @"stype" : senderType, @"message" : message};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
@@ -121,10 +121,12 @@ static Api* kSharedApi;
     if (!error) {
         // 4
         NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
             NSLog(@"%@",json);
+            }
         }];
         
         // 5
