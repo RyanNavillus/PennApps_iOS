@@ -29,20 +29,6 @@ static Api* kSharedApi;
 }
 
 
--(void)getHelloWorld{
-    // 1
-    NSString *dataUrl = @"";
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
-    // 2
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", myString);
-    }];
-    
-    [downloadTask resume];
-    
-}
-
 -(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"login"];
@@ -148,7 +134,7 @@ static Api* kSharedApi;
 
 -(void)getConversationList{
     // 1
-    NSString *dataUrl = @"conversations";
+    NSString *dataUrl = @"conversationlist";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
     // 2
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -157,6 +143,8 @@ static Api* kSharedApi;
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
             //store value for "cid" key in Core Data
+            
+            
         }
     }];
     
