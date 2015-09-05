@@ -13,6 +13,7 @@
 		8669D0C61B9A73D0008FEBC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8669D0C51B9A73D0008FEBC7 /* Images.xcassets */; };
 		8669D0C91B9A73D0008FEBC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8669D0C71B9A73D0008FEBC7 /* LaunchScreen.xib */; };
 		8669D0D51B9A73D0008FEBC7 /* PennAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669D0D41B9A73D0008FEBC7 /* PennAppsTests.swift */; };
+		86A582201B9A8AB0001F1F9F /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A5821F1B9A8AB0001F1F9F /* Alamofire-SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8669D0CE1B9A73D0008FEBC7 /* PennAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8669D0D31B9A73D0008FEBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8669D0D41B9A73D0008FEBC7 /* PennAppsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PennAppsTests.swift; sourceTree = "<group>"; };
+		86A5821F1B9A8AB0001F1F9F /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		8669D0B01B9A73D0008FEBC7 = {
 			isa = PBXGroup;
 			children = (
+				86A5821F1B9A8AB0001F1F9F /* Alamofire-SwiftyJSON.swift */,
 				8669D0BB1B9A73D0008FEBC7 /* PennApps */,
 				8669D0D11B9A73D0008FEBC7 /* PennAppsTests */,
 				8669D0BA1B9A73D0008FEBC7 /* Products */,
@@ -156,6 +159,7 @@
 		8669D0B11B9A73D0008FEBC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Darpan Shah";
 				TargetAttributes = {
@@ -214,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8669D0C11B9A73D0008FEBC7 /* ViewController.swift in Sources */,
+				86A582201B9A8AB0001F1F9F /* Alamofire-SwiftyJSON.swift in Sources */,
 				8669D0BF1B9A73D0008FEBC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +419,7 @@
 				8669D0DA1B9A73D0008FEBC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8669D0DB1B9A73D0008FEBC7 /* Build configuration list for PBXNativeTarget "PennAppsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +428,7 @@
 				8669D0DD1B9A73D0008FEBC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
