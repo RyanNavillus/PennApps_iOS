@@ -123,7 +123,8 @@
     
     
     //API STUFF
-    self.doctor = [[Api sharedApi] loginWithUserName:userName andPassword:password];
+    [[Api sharedApi] createNewMessage:@"Hello World" FromSenderType:@"1" WithCID:@"1"];
+    //self.doctor = [[Api sharedApi] loginWithUserName:userName andPassword:password];
     //Core Data
 }
 @end
