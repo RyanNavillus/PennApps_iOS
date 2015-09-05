@@ -12,7 +12,6 @@
 
 @interface Api : NSObject
 + (instancetype)sharedApi;
--(void)getHelloWorld;
 -(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password;
 -(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
 

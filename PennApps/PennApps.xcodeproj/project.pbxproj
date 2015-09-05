@@ -20,8 +20,6 @@
 		3BD2175B1B9B3C4D00C85ED4 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2175A1B9B3C4D00C85ED4 /* Doctor.m */; settings = {ASSET_TAGS = (); }; };
 		866CFDD21B9B232C00B23536 /* InboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD11B9B232B00B23536 /* InboxView.m */; settings = {ASSET_TAGS = (); }; };
 		866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD51B9B290600B23536 /* TableCustomCell.m */; settings = {ASSET_TAGS = (); }; };
-		866CFE0B1B9B56B200B23536 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 866CFE091B9B56B100B23536 /* DataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		866CFE0E1B9B582300B23536 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFE0D1B9B582300B23536 /* DataManager.m */; settings = {ASSET_TAGS = (); }; };
 		86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B6821B9AD1930045D0CB /* RegisterView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -70,9 +68,6 @@
 		866CFDD31B9B235E00B23536 /* InboxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxView.h; sourceTree = "<group>"; };
 		866CFDD41B9B286400B23536 /* TableCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCustomCell.h; sourceTree = "<group>"; };
 		866CFDD51B9B290600B23536 /* TableCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCustomCell.m; sourceTree = "<group>"; };
-		866CFE0A1B9B56B200B23536 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		866CFE0C1B9B582300B23536 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		866CFE0D1B9B582300B23536 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		86F9B6821B9AD1930045D0CB /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		86F9B6841B9AD1B60045D0CB /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,22 +129,19 @@
 				3BD2175A1B9B3C4D00C85ED4 /* Doctor.m */,
 				3BD2174B1B9AB52B00C85ED4 /* loginView.h */,
 				3BD2174C1B9AB52B00C85ED4 /* loginView.m */,
-				86F9B6821B9AD1930045D0CB /* RegisterView.m */,
 				86F9B6841B9AD1B60045D0CB /* RegisterView.h */,
+				86F9B6821B9AD1930045D0CB /* RegisterView.m */,
 				3BD2174F1B9ABEC500C85ED4 /* Api.h */,
 				3BD217501B9ABEC500C85ED4 /* Api.m */,
 				866CFDD41B9B286400B23536 /* TableCustomCell.h */,
 				866CFDD51B9B290600B23536 /* TableCustomCell.m */,
-				866CFDD11B9B232B00B23536 /* InboxView.m */,
 				866CFDD31B9B235E00B23536 /* InboxView.h */,
+				866CFDD11B9B232B00B23536 /* InboxView.m */,
 				3BD217211B9AB4E800C85ED4 /* Main.storyboard */,
 				3BD217241B9AB4E800C85ED4 /* Assets.xcassets */,
 				3BD217261B9AB4E800C85ED4 /* LaunchScreen.storyboard */,
 				3BD217291B9AB4E800C85ED4 /* Info.plist */,
 				3BD217181B9AB4E800C85ED4 /* Supporting Files */,
-				866CFE091B9B56B100B23536 /* DataModel.xcdatamodeld */,
-				866CFE0C1B9B582300B23536 /* DataManager.h */,
-				866CFE0D1B9B582300B23536 /* DataManager.m */,
 			);
 			path = PennApps;
 			sourceTree = "<group>";
@@ -311,7 +303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */,
-				866CFE0B1B9B56B200B23536 /* DataModel.xcdatamodeld in Sources */,
 				3BD217511B9ABEC500C85ED4 /* Api.m in Sources */,
 				3BD2175B1B9B3C4D00C85ED4 /* Doctor.m in Sources */,
 				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
@@ -319,7 +310,6 @@
 				3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */,
 				866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */,
 				866CFDD21B9B232C00B23536 /* InboxView.m in Sources */,
-				866CFE0E1B9B582300B23536 /* DataManager.m in Sources */,
 				86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,19 +557,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		866CFE091B9B56B100B23536 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				866CFE0A1B9B56B200B23536 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 866CFE0A1B9B56B200B23536 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3BD2170D1B9AB4E800C85ED4 /* Project object */;
 }
