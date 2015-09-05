@@ -29,20 +29,6 @@ static Api* kSharedApi;
 }
 
 
--(void)getHelloWorld{
-    // 1
-    NSString *dataUrl = @"";
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
-    // 2
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", myString);
-    }];
-    
-    [downloadTask resume];
-    
-}
-
 -(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"login"];
@@ -138,6 +124,7 @@ static Api* kSharedApi;
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
+            NSLog(@"%@",json);
         }];
         
         // 5
