@@ -105,7 +105,7 @@
     
     
     //API STUFF
-    [[Api sharedApi] postLoginInfoWithUserName:uName andPassword:passwd];
+    [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
     
 }
 @end
