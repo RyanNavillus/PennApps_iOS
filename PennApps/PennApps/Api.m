@@ -157,6 +157,8 @@ static Api* kSharedApi;
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
             //store value for "cid" key in Core Data
+            NSLog(@"JSON %@", json);
+        
         }
     }];
     
