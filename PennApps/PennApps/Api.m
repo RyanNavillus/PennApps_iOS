@@ -10,7 +10,6 @@
 
 
 
-
 static NSString* kBaseURLString = @"http://45.79.138.244:80/";
 
 static Api* kSharedApi;
@@ -44,7 +43,7 @@ static Api* kSharedApi;
     
 }
 
--(void)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
+-(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"login"];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -62,18 +61,21 @@ static Api* kSharedApi;
     NSDictionary *dictionary = @{@"username": username, @"password" : password};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+    Doctor *doctor = [[Doctor alloc] init];
     
     if (!error) {
         // 4
         NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-            NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", myString);
+            if(data){
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                [doctor setProperties:json];
+            }
         }];
         
         // 5
         [dataTask resume];
     }
-    
+    return doctor;
 }
 
 -(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name{
@@ -92,19 +94,19 @@ static Api* kSharedApi;
     // 3
     NSDictionary *dictionary = @{@"username": username, @"password" : password, @"specialty" : specialty, @"name" : name};
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
-                                                   options:kNilOptions error:&error];
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+
     
     if (!error) {
         // 4
-        NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
-                                                                   fromData:data completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-                                                                       NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                                       NSLog(@"%@", myString);
-                                                                   }];
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableContainers
+                                                                   error:&error];
+        }];
         
         // 5
-        [uploadTask resume];
+        [dataTask resume];
     }
     
 }
@@ -125,19 +127,19 @@ static Api* kSharedApi;
     // 3
     NSDictionary *dictionary = @{@"cid": [NSNumber numberWithInteger: cid], @"stype" : [NSNumber numberWithInteger:senderType], @"message" : message};
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
-                                                   options:kNilOptions error:&error];
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+    
     
     if (!error) {
         // 4
-        NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
-                                                                   fromData:data completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-                                                                       NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                                       NSLog(@"%@", myString);
-                                                                   }];
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableContainers
+                                                                   error:&error];
+        }];
         
         // 5
-        [uploadTask resume];
+        [dataTask resume];
     }
     
 }

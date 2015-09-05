@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doctor.h"
+
 
 @interface Api : NSObject
 + (instancetype)sharedApi;
 -(void)getHelloWorld;
 -(void)loginWithUserName:(NSString *)username andPassword:(NSString *)password;
--(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
+-(Doctor *)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
 
 @end

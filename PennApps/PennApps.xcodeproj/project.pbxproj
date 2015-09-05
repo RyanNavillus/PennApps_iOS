@@ -17,9 +17,8 @@
 		3BD2173E1B9AB4E800C85ED4 /* PennAppsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2173D1B9AB4E800C85ED4 /* PennAppsUITests.m */; };
 		3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2174C1B9AB52B00C85ED4 /* loginView.m */; settings = {ASSET_TAGS = (); }; };
 		3BD217511B9ABEC500C85ED4 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217501B9ABEC500C85ED4 /* Api.m */; settings = {ASSET_TAGS = (); }; };
-
+		3BD217581B9B320400C85ED4 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217571B9B320400C85ED4 /* Doctor.m */; settings = {ASSET_TAGS = (); }; };
 		86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B6821B9AD1930045D0CB /* RegisterView.m */; settings = {ASSET_TAGS = (); }; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +59,11 @@
 		3BD2174C1B9AB52B00C85ED4 /* loginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginView.m; sourceTree = "<group>"; };
 		3BD2174F1B9ABEC500C85ED4 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		3BD217501B9ABEC500C85ED4 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
+		3BD217541B9AD4DF00C85ED4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3BD217561B9B320400C85ED4 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		3BD217571B9B320400C85ED4 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		86F9B6821B9AD1930045D0CB /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		86F9B6841B9AD1B60045D0CB /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
-
-		3BD217541B9AD4DF00C85ED4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +123,8 @@
 				3BD2174C1B9AB52B00C85ED4 /* loginView.m */,
 				86F9B6821B9AD1930045D0CB /* RegisterView.m */,
 				86F9B6841B9AD1B60045D0CB /* RegisterView.h */,
+				3BD217561B9B320400C85ED4 /* Doctor.h */,
+				3BD217571B9B320400C85ED4 /* Doctor.m */,
 				3BD2174F1B9ABEC500C85ED4 /* Api.h */,
 				3BD217501B9ABEC500C85ED4 /* Api.m */,
 				3BD217211B9AB4E800C85ED4 /* Main.storyboard */,
@@ -264,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD217281B9AB4E800C85ED4 /* LaunchScreen.storyboard in Resources */,
-				3BD217551B9AD4DF00C85ED4 /* Default-568h@2x.png in Resources */,
 				3BD217251B9AB4E800C85ED4 /* Assets.xcassets in Resources */,
 				3BD217231B9AB4E800C85ED4 /* Main.storyboard in Resources */,
 			);
@@ -292,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */,
+				3BD217581B9B320400C85ED4 /* Doctor.m in Sources */,
 				3BD217511B9ABEC500C85ED4 /* Api.m in Sources */,
 				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
 				3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */,
