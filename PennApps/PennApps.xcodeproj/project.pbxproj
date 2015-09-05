@@ -20,6 +20,7 @@
 		866CFDD21B9B232C00B23536 /* InboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD11B9B232B00B23536 /* InboxView.m */; settings = {ASSET_TAGS = (); }; };
 		866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFDD51B9B290600B23536 /* TableCustomCell.m */; settings = {ASSET_TAGS = (); }; };
 		866CFE081B9B3C5500B23536 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 866CFE071B9B3C5500B23536 /* Doctor.m */; settings = {ASSET_TAGS = (); }; };
+
 		86F9B6831B9AD1930045D0CB /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B6821B9AD1930045D0CB /* RegisterView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -62,12 +63,20 @@
 		3BD2174F1B9ABEC500C85ED4 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		3BD217501B9ABEC500C85ED4 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		3BD217541B9AD4DF00C85ED4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		3BD217591B9B3C4D00C85ED4 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		3BD2175A1B9B3C4D00C85ED4 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+>>>>>>> 675a405032292682d41a51bea1a8efea20cb6bcb
 		866CFDD11B9B232B00B23536 /* InboxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxView.m; sourceTree = "<group>"; };
 		866CFDD31B9B235E00B23536 /* InboxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxView.h; sourceTree = "<group>"; };
 		866CFDD41B9B286400B23536 /* TableCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCustomCell.h; sourceTree = "<group>"; };
 		866CFDD51B9B290600B23536 /* TableCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCustomCell.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		866CFE061B9B3C5500B23536 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		866CFE071B9B3C5500B23536 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+=======
+>>>>>>> 675a405032292682d41a51bea1a8efea20cb6bcb
 		86F9B6821B9AD1930045D0CB /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		86F9B6841B9AD1B60045D0CB /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,12 +130,20 @@
 		3BD217171B9AB4E800C85ED4 /* PennApps */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				866CFE061B9B3C5500B23536 /* Doctor.h */,
 				866CFE071B9B3C5500B23536 /* Doctor.m */,
+=======
+>>>>>>> 675a405032292682d41a51bea1a8efea20cb6bcb
 				3BD2171B1B9AB4E800C85ED4 /* AppDelegate.h */,
 				3BD2171C1B9AB4E800C85ED4 /* AppDelegate.m */,
 				3BD2171E1B9AB4E800C85ED4 /* ViewController.h */,
 				3BD2171F1B9AB4E800C85ED4 /* ViewController.m */,
+<<<<<<< HEAD
+=======
+				3BD217591B9B3C4D00C85ED4 /* Doctor.h */,
+				3BD2175A1B9B3C4D00C85ED4 /* Doctor.m */,
+>>>>>>> 675a405032292682d41a51bea1a8efea20cb6bcb
 				3BD2174B1B9AB52B00C85ED4 /* loginView.h */,
 				3BD2174C1B9AB52B00C85ED4 /* loginView.m */,
 				86F9B6821B9AD1930045D0CB /* RegisterView.m */,
@@ -304,7 +321,11 @@
 			files = (
 				3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */,
 				3BD217511B9ABEC500C85ED4 /* Api.m in Sources */,
+<<<<<<< HEAD
 				866CFE081B9B3C5500B23536 /* Doctor.m in Sources */,
+=======
+				3BD2175B1B9B3C4D00C85ED4 /* Doctor.m in Sources */,
+>>>>>>> 675a405032292682d41a51bea1a8efea20cb6bcb
 				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
 				3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */,
 				3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */,
