@@ -17,7 +17,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    self.view = [[loginView alloc] init];
+    self.view = [[RegisterView alloc] init];
 }
 
 

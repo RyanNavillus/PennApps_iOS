@@ -78,11 +78,11 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.password attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[loginLabel]-28-|" options:0 metrics:nil views:@{@"registrationLabel" : self.registrationLabel}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[userNameField]-28-|" options:0 metrics:nil views:@{@"name" : self.name}]];
-       [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[userNameField]-28-|" options:0 metrics:nil views:@{@"name" : self.Specialty}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[passwordField]-28-|" options:0 metrics:nil views:@{@"lastName" : self.userName}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[passwordField]-28-|" options:0 metrics:nil views:@{@"Specialty" : self.password}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[registrationLabel]-28-|" options:0 metrics:nil views:@{@"registrationLabel" : self.registrationLabel}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[name]-28-|" options:0 metrics:nil views:@{@"name" : self.name}]];
+       [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[Specialty]-28-|" options:0 metrics:nil views:@{@"Specialty" : self.Specialty}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[userName]-28-|" options:0 metrics:nil views:@{@"userName" : self.userName}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[password]-28-|" options:0 metrics:nil views:@{@"password" : self.password}]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-28-[submitButton]-28-|" options:0 metrics:nil views:@{@"submitButton" : self.submitButton}]];
     
     
@@ -105,6 +105,7 @@
     
     
     //API STUFF
+
     [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
     
 }
