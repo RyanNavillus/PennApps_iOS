@@ -30,6 +30,20 @@ static Api* kSharedApi;
 }
 
 
+-(void)getHelloWorld{
+    // 1
+    NSString *dataUrl = @"";
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    // 2
+    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", myString);
+    }];
+    
+    [downloadTask resume];
+    
+}
+
 -(void)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"login"];
@@ -47,19 +61,17 @@ static Api* kSharedApi;
     // 3
     NSDictionary *dictionary = @{@"username": username, @"password" : password};
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
-                                                   options:kNilOptions error:&error];
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
     if (!error) {
         // 4
-        NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
-                                                                   fromData:data completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-                                                                       NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                                       NSLog(@"%@", myString);
-                                                                   }];
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", myString);
+        }];
         
         // 5
-        [uploadTask resume];
+        [dataTask resume];
     }
     
 }
