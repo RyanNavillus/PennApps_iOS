@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7F5CFB52992A17D3E57997868F34D8263642E5F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7F5CFB52992A17D3E57997868F34D8263642E5F9" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8C6B5977-2F26-429C-94D1-BC28E1855C19",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7F5CFB52992A17D3E57997868F34D8263642E5F9" : "PennApps_iOS\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "PennApps_iOS\/PennApps\/Alamofire\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PennApps",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PennApps\/PennApps.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/RyanTheGamer\/PennApps_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F5CFB52992A17D3E57997868F34D8263642E5F9"
+    }
+  ]
+}
