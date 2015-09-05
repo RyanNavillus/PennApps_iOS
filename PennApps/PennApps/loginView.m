@@ -86,7 +86,7 @@
     
     
     //API STUFF
-    [[Api sharedApi] getHelloWorld];
+    [[Api sharedApi] postLoginInfoWithUserName:userName andPassword:password];
     
 }
 @end

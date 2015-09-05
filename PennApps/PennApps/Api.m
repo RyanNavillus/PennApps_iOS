@@ -44,18 +44,18 @@ static Api* kSharedApi;
     
 }
 
--(void)postLoginInfo{
+-(void)postLoginInfoWithUserName:(NSString *)username andPassword:(NSString *)password{
     // 1
-    NSURL *url = [NSURL URLWithString:@"YOUR_WEBSERVICE_URL"];
+    NSURL *url = [NSURL URLWithString:@"/login"];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     
     // 2
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
+    request.HTTPMethod = @"GET";
     
     // 3
-    NSDictionary *dictionary = @{@"key1": @"value1"};
+    NSDictionary *dictionary = @{@"username": username, @"password" : password};
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
                                                    options:kNilOptions error:&error];
@@ -64,7 +64,8 @@ static Api* kSharedApi;
         // 4
         NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request
                                                                    fromData:data completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-                                                                       // Handle response here
+                                                                       NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                                                       NSLog(@"%@", myString);
                                                                    }];
         
         // 5
