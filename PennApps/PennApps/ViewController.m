@@ -18,6 +18,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     self.view = [[InboxView alloc] init];
 }
 
