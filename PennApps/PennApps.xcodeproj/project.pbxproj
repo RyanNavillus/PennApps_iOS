@@ -7,99 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BD217041B9A9BD300C85ED4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD216FB1B9A9B4200C85ED4 /* Alamofire.framework */; };
-		3BD217051B9A9BD300C85ED4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD216FB1B9A9B4200C85ED4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8669D0BF1B9A73D0008FEBC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669D0BE1B9A73D0008FEBC7 /* AppDelegate.swift */; };
-		8669D0C11B9A73D0008FEBC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669D0C01B9A73D0008FEBC7 /* ViewController.swift */; };
-		8669D0C41B9A73D0008FEBC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8669D0C21B9A73D0008FEBC7 /* Main.storyboard */; };
-		8669D0C61B9A73D0008FEBC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8669D0C51B9A73D0008FEBC7 /* Images.xcassets */; };
-		8669D0C91B9A73D0008FEBC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8669D0C71B9A73D0008FEBC7 /* LaunchScreen.xib */; };
-		8669D0D51B9A73D0008FEBC7 /* PennAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669D0D41B9A73D0008FEBC7 /* PennAppsTests.swift */; };
+		3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217191B9AB4E800C85ED4 /* main.m */; };
+		3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2171C1B9AB4E800C85ED4 /* AppDelegate.m */; };
+		3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2171F1B9AB4E800C85ED4 /* ViewController.m */; };
+		3BD217231B9AB4E800C85ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD217211B9AB4E800C85ED4 /* Main.storyboard */; };
+		3BD217251B9AB4E800C85ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD217241B9AB4E800C85ED4 /* Assets.xcassets */; };
+		3BD217281B9AB4E800C85ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD217261B9AB4E800C85ED4 /* LaunchScreen.storyboard */; };
+		3BD217331B9AB4E800C85ED4 /* PennAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217321B9AB4E800C85ED4 /* PennAppsTests.m */; };
+		3BD2173E1B9AB4E800C85ED4 /* PennAppsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2173D1B9AB4E800C85ED4 /* PennAppsUITests.m */; };
+		3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2174C1B9AB52B00C85ED4 /* loginView.m */; settings = {ASSET_TAGS = (); }; };
+		3BD217511B9ABEC500C85ED4 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217501B9ABEC500C85ED4 /* Api.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BD216FA1B9A9B4200C85ED4 /* PBXContainerItemProxy */ = {
+		3BD2172F1B9AB4E800C85ED4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		3BD216FC1B9A9B4200C85ED4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		3BD216FE1B9A9B4200C85ED4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		3BD217001B9A9B4200C85ED4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		3BD217061B9A9BD300C85ED4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
+			containerPortal = 3BD2170D1B9AB4E800C85ED4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
+			remoteGlobalIDString = 3BD217141B9AB4E800C85ED4;
+			remoteInfo = PennApps;
 		};
-		8669D0CF1B9A73D0008FEBC7 /* PBXContainerItemProxy */ = {
+		3BD2173A1B9AB4E800C85ED4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8669D0B11B9A73D0008FEBC7 /* Project object */;
+			containerPortal = 3BD2170D1B9AB4E800C85ED4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8669D0B81B9A73D0008FEBC7;
+			remoteGlobalIDString = 3BD217141B9AB4E800C85ED4;
 			remoteInfo = PennApps;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3BD217081B9A9BD300C85ED4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3BD217051B9A9BD300C85ED4 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		8669D0B91B9A73D0008FEBC7 /* PennApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8669D0BD1B9A73D0008FEBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8669D0BE1B9A73D0008FEBC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8669D0C01B9A73D0008FEBC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8669D0C31B9A73D0008FEBC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8669D0C51B9A73D0008FEBC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8669D0C81B9A73D0008FEBC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8669D0CE1B9A73D0008FEBC7 /* PennAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8669D0D31B9A73D0008FEBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8669D0D41B9A73D0008FEBC7 /* PennAppsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PennAppsTests.swift; sourceTree = "<group>"; };
+		3BD217151B9AB4E800C85ED4 /* PennApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD217191B9AB4E800C85ED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BD2171B1B9AB4E800C85ED4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BD2171C1B9AB4E800C85ED4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BD2171E1B9AB4E800C85ED4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BD2171F1B9AB4E800C85ED4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BD217221B9AB4E800C85ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BD217241B9AB4E800C85ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BD217271B9AB4E800C85ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BD217291B9AB4E800C85ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2172E1B9AB4E800C85ED4 /* PennAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD217321B9AB4E800C85ED4 /* PennAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PennAppsTests.m; sourceTree = "<group>"; };
+		3BD217341B9AB4E800C85ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD217391B9AB4E800C85ED4 /* PennAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PennAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD2173D1B9AB4E800C85ED4 /* PennAppsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PennAppsUITests.m; sourceTree = "<group>"; };
+		3BD2173F1B9AB4E800C85ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD2174B1B9AB52B00C85ED4 /* loginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginView.h; sourceTree = "<group>"; };
+		3BD2174C1B9AB52B00C85ED4 /* loginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginView.m; sourceTree = "<group>"; };
+		3BD2174F1B9ABEC500C85ED4 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		3BD217501B9ABEC500C85ED4 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8669D0B61B9A73D0008FEBC7 /* Frameworks */ = {
+		3BD217121B9AB4E800C85ED4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD217041B9A9BD300C85ED4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8669D0CB1B9A73D0008FEBC7 /* Frameworks */ = {
+		3BD2172B1B9AB4E800C85ED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD217361B9AB4E800C85ED4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,135 +84,151 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3BD216F41B9A9B4200C85ED4 /* Products */ = {
+		3BD2170C1B9AB4E800C85ED4 = {
 			isa = PBXGroup;
 			children = (
-				3BD216FB1B9A9B4200C85ED4 /* Alamofire.framework */,
-				3BD216FD1B9A9B4200C85ED4 /* Alamofire.framework */,
-				3BD216FF1B9A9B4200C85ED4 /* Alamofire iOS Tests.xctest */,
-				3BD217011B9A9B4200C85ED4 /* Alamofire OSX Tests.xctest */,
+				3BD217171B9AB4E800C85ED4 /* PennApps */,
+				3BD217311B9AB4E800C85ED4 /* PennAppsTests */,
+				3BD2173C1B9AB4E800C85ED4 /* PennAppsUITests */,
+				3BD217161B9AB4E800C85ED4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BD217161B9AB4E800C85ED4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BD217151B9AB4E800C85ED4 /* PennApps.app */,
+				3BD2172E1B9AB4E800C85ED4 /* PennAppsTests.xctest */,
+				3BD217391B9AB4E800C85ED4 /* PennAppsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8669D0B01B9A73D0008FEBC7 = {
+		3BD217171B9AB4E800C85ED4 /* PennApps */ = {
 			isa = PBXGroup;
 			children = (
-				3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */,
-				8669D0BB1B9A73D0008FEBC7 /* PennApps */,
-				8669D0D11B9A73D0008FEBC7 /* PennAppsTests */,
-				8669D0BA1B9A73D0008FEBC7 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		8669D0BA1B9A73D0008FEBC7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8669D0B91B9A73D0008FEBC7 /* PennApps.app */,
-				8669D0CE1B9A73D0008FEBC7 /* PennAppsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8669D0BB1B9A73D0008FEBC7 /* PennApps */ = {
-			isa = PBXGroup;
-			children = (
-				8669D0BE1B9A73D0008FEBC7 /* AppDelegate.swift */,
-				8669D0C01B9A73D0008FEBC7 /* ViewController.swift */,
-				8669D0C21B9A73D0008FEBC7 /* Main.storyboard */,
-				8669D0C51B9A73D0008FEBC7 /* Images.xcassets */,
-				8669D0C71B9A73D0008FEBC7 /* LaunchScreen.xib */,
-				8669D0BC1B9A73D0008FEBC7 /* Supporting Files */,
+				3BD2171B1B9AB4E800C85ED4 /* AppDelegate.h */,
+				3BD2171C1B9AB4E800C85ED4 /* AppDelegate.m */,
+				3BD2171E1B9AB4E800C85ED4 /* ViewController.h */,
+				3BD2171F1B9AB4E800C85ED4 /* ViewController.m */,
+				3BD2174B1B9AB52B00C85ED4 /* loginView.h */,
+				3BD2174C1B9AB52B00C85ED4 /* loginView.m */,
+				3BD2174F1B9ABEC500C85ED4 /* Api.h */,
+				3BD217501B9ABEC500C85ED4 /* Api.m */,
+				3BD217211B9AB4E800C85ED4 /* Main.storyboard */,
+				3BD217241B9AB4E800C85ED4 /* Assets.xcassets */,
+				3BD217261B9AB4E800C85ED4 /* LaunchScreen.storyboard */,
+				3BD217291B9AB4E800C85ED4 /* Info.plist */,
+				3BD217181B9AB4E800C85ED4 /* Supporting Files */,
 			);
 			path = PennApps;
 			sourceTree = "<group>";
 		};
-		8669D0BC1B9A73D0008FEBC7 /* Supporting Files */ = {
+		3BD217181B9AB4E800C85ED4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8669D0BD1B9A73D0008FEBC7 /* Info.plist */,
+				3BD217191B9AB4E800C85ED4 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8669D0D11B9A73D0008FEBC7 /* PennAppsTests */ = {
+		3BD217311B9AB4E800C85ED4 /* PennAppsTests */ = {
 			isa = PBXGroup;
 			children = (
-				8669D0D41B9A73D0008FEBC7 /* PennAppsTests.swift */,
-				8669D0D21B9A73D0008FEBC7 /* Supporting Files */,
+				3BD217321B9AB4E800C85ED4 /* PennAppsTests.m */,
+				3BD217341B9AB4E800C85ED4 /* Info.plist */,
 			);
 			path = PennAppsTests;
 			sourceTree = "<group>";
 		};
-		8669D0D21B9A73D0008FEBC7 /* Supporting Files */ = {
+		3BD2173C1B9AB4E800C85ED4 /* PennAppsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8669D0D31B9A73D0008FEBC7 /* Info.plist */,
+				3BD2173D1B9AB4E800C85ED4 /* PennAppsUITests.m */,
+				3BD2173F1B9AB4E800C85ED4 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = PennAppsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8669D0B81B9A73D0008FEBC7 /* PennApps */ = {
+		3BD217141B9AB4E800C85ED4 /* PennApps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8669D0D81B9A73D0008FEBC7 /* Build configuration list for PBXNativeTarget "PennApps" */;
+			buildConfigurationList = 3BD217421B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennApps" */;
 			buildPhases = (
-				8669D0B51B9A73D0008FEBC7 /* Sources */,
-				8669D0B61B9A73D0008FEBC7 /* Frameworks */,
-				8669D0B71B9A73D0008FEBC7 /* Resources */,
-				3BD217081B9A9BD300C85ED4 /* Embed Frameworks */,
+				3BD217111B9AB4E800C85ED4 /* Sources */,
+				3BD217121B9AB4E800C85ED4 /* Frameworks */,
+				3BD217131B9AB4E800C85ED4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BD217071B9A9BD300C85ED4 /* PBXTargetDependency */,
 			);
 			name = PennApps;
 			productName = PennApps;
-			productReference = 8669D0B91B9A73D0008FEBC7 /* PennApps.app */;
+			productReference = 3BD217151B9AB4E800C85ED4 /* PennApps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8669D0CD1B9A73D0008FEBC7 /* PennAppsTests */ = {
+		3BD2172D1B9AB4E800C85ED4 /* PennAppsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8669D0DB1B9A73D0008FEBC7 /* Build configuration list for PBXNativeTarget "PennAppsTests" */;
+			buildConfigurationList = 3BD217451B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennAppsTests" */;
 			buildPhases = (
-				8669D0CA1B9A73D0008FEBC7 /* Sources */,
-				8669D0CB1B9A73D0008FEBC7 /* Frameworks */,
-				8669D0CC1B9A73D0008FEBC7 /* Resources */,
+				3BD2172A1B9AB4E800C85ED4 /* Sources */,
+				3BD2172B1B9AB4E800C85ED4 /* Frameworks */,
+				3BD2172C1B9AB4E800C85ED4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8669D0D01B9A73D0008FEBC7 /* PBXTargetDependency */,
+				3BD217301B9AB4E800C85ED4 /* PBXTargetDependency */,
 			);
 			name = PennAppsTests;
 			productName = PennAppsTests;
-			productReference = 8669D0CE1B9A73D0008FEBC7 /* PennAppsTests.xctest */;
+			productReference = 3BD2172E1B9AB4E800C85ED4 /* PennAppsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BD217381B9AB4E800C85ED4 /* PennAppsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD217481B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennAppsUITests" */;
+			buildPhases = (
+				3BD217351B9AB4E800C85ED4 /* Sources */,
+				3BD217361B9AB4E800C85ED4 /* Frameworks */,
+				3BD217371B9AB4E800C85ED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BD2173B1B9AB4E800C85ED4 /* PBXTargetDependency */,
+			);
+			name = PennAppsUITests;
+			productName = PennAppsUITests;
+			productReference = 3BD217391B9AB4E800C85ED4 /* PennAppsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8669D0B11B9A73D0008FEBC7 /* Project object */ = {
+		3BD2170D1B9AB4E800C85ED4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Darpan Shah";
+				ORGANIZATIONNAME = "Ryan Sullivan";
 				TargetAttributes = {
-					8669D0B81B9A73D0008FEBC7 = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9XWYL3K4YT;
+					3BD217141B9AB4E800C85ED4 = {
+						CreatedOnToolsVersion = 7.0;
 					};
-					8669D0CD1B9A73D0008FEBC7 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 8669D0B81B9A73D0008FEBC7;
+					3BD2172D1B9AB4E800C85ED4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 3BD217141B9AB4E800C85ED4;
+					};
+					3BD217381B9AB4E800C85ED4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 3BD217141B9AB4E800C85ED4;
 					};
 				};
 			};
-			buildConfigurationList = 8669D0B41B9A73D0008FEBC7 /* Build configuration list for PBXProject "PennApps" */;
+			buildConfigurationList = 3BD217101B9AB4E800C85ED4 /* Build configuration list for PBXProject "PennApps" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -245,66 +236,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 8669D0B01B9A73D0008FEBC7;
-			productRefGroup = 8669D0BA1B9A73D0008FEBC7 /* Products */;
+			mainGroup = 3BD2170C1B9AB4E800C85ED4;
+			productRefGroup = 3BD217161B9AB4E800C85ED4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3BD216F41B9A9B4200C85ED4 /* Products */;
-					ProjectRef = 3BD216F31B9A9B4200C85ED4 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				8669D0B81B9A73D0008FEBC7 /* PennApps */,
-				8669D0CD1B9A73D0008FEBC7 /* PennAppsTests */,
+				3BD217141B9AB4E800C85ED4 /* PennApps */,
+				3BD2172D1B9AB4E800C85ED4 /* PennAppsTests */,
+				3BD217381B9AB4E800C85ED4 /* PennAppsUITests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		3BD216FB1B9A9B4200C85ED4 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 3BD216FA1B9A9B4200C85ED4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3BD216FD1B9A9B4200C85ED4 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 3BD216FC1B9A9B4200C85ED4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3BD216FF1B9A9B4200C85ED4 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 3BD216FE1B9A9B4200C85ED4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3BD217011B9A9B4200C85ED4 /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 3BD217001B9A9B4200C85ED4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		8669D0B71B9A73D0008FEBC7 /* Resources */ = {
+		3BD217131B9AB4E800C85ED4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8669D0C41B9A73D0008FEBC7 /* Main.storyboard in Resources */,
-				8669D0C91B9A73D0008FEBC7 /* LaunchScreen.xib in Resources */,
-				8669D0C61B9A73D0008FEBC7 /* Images.xcassets in Resources */,
+				3BD217281B9AB4E800C85ED4 /* LaunchScreen.storyboard in Resources */,
+				3BD217251B9AB4E800C85ED4 /* Assets.xcassets in Resources */,
+				3BD217231B9AB4E800C85ED4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8669D0CC1B9A73D0008FEBC7 /* Resources */ = {
+		3BD2172C1B9AB4E800C85ED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD217371B9AB4E800C85ED4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,59 +276,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8669D0B51B9A73D0008FEBC7 /* Sources */ = {
+		3BD217111B9AB4E800C85ED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8669D0C11B9A73D0008FEBC7 /* ViewController.swift in Sources */,
-				8669D0BF1B9A73D0008FEBC7 /* AppDelegate.swift in Sources */,
+				3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */,
+				3BD217511B9ABEC500C85ED4 /* Api.m in Sources */,
+				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
+				3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */,
+				3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8669D0CA1B9A73D0008FEBC7 /* Sources */ = {
+		3BD2172A1B9AB4E800C85ED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8669D0D51B9A73D0008FEBC7 /* PennAppsTests.swift in Sources */,
+				3BD217331B9AB4E800C85ED4 /* PennAppsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD217351B9AB4E800C85ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD2173E1B9AB4E800C85ED4 /* PennAppsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3BD217071B9A9BD300C85ED4 /* PBXTargetDependency */ = {
+		3BD217301B9AB4E800C85ED4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 3BD217061B9A9BD300C85ED4 /* PBXContainerItemProxy */;
+			target = 3BD217141B9AB4E800C85ED4 /* PennApps */;
+			targetProxy = 3BD2172F1B9AB4E800C85ED4 /* PBXContainerItemProxy */;
 		};
-		8669D0D01B9A73D0008FEBC7 /* PBXTargetDependency */ = {
+		3BD2173B1B9AB4E800C85ED4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8669D0B81B9A73D0008FEBC7 /* PennApps */;
-			targetProxy = 8669D0CF1B9A73D0008FEBC7 /* PBXContainerItemProxy */;
+			target = 3BD217141B9AB4E800C85ED4 /* PennApps */;
+			targetProxy = 3BD2173A1B9AB4E800C85ED4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8669D0C21B9A73D0008FEBC7 /* Main.storyboard */ = {
+		3BD217211B9AB4E800C85ED4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8669D0C31B9A73D0008FEBC7 /* Base */,
+				3BD217221B9AB4E800C85ED4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8669D0C71B9A73D0008FEBC7 /* LaunchScreen.xib */ = {
+		3BD217261B9AB4E800C85ED4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8669D0C81B9A73D0008FEBC7 /* Base */,
+				3BD217271B9AB4E800C85ED4 /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8669D0D61B9A73D0008FEBC7 /* Debug */ = {
+		3BD217401B9AB4E800C85ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,7 +358,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -396,23 +369,21 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8669D0D71B9A73D0008FEBC7 /* Release */ = {
+		3BD217411B9AB4E800C85ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -442,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,100 +421,113 @@
 			};
 			name = Release;
 		};
-		8669D0D91B9A73D0008FEBC7 /* Debug */ = {
+		3BD217431B9AB4E800C85ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PennApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dshah.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8669D0DA1B9A73D0008FEBC7 /* Release */ = {
+		3BD217441B9AB4E800C85ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PennApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dshah.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		8669D0DC1B9A73D0008FEBC7 /* Debug */ = {
+		3BD217461B9AB4E800C85ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PennAppsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dshah.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennAppsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PennApps.app/PennApps";
 			};
 			name = Debug;
 		};
-		8669D0DD1B9A73D0008FEBC7 /* Release */ = {
+		3BD217471B9AB4E800C85ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PennAppsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dshah.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennAppsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PennApps.app/PennApps";
+			};
+			name = Release;
+		};
+		3BD217491B9AB4E800C85ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PennAppsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennAppsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PennApps;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3BD2174A1B9AB4E800C85ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PennAppsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryansullivan.PennAppsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PennApps;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8669D0B41B9A73D0008FEBC7 /* Build configuration list for PBXProject "PennApps" */ = {
+		3BD217101B9AB4E800C85ED4 /* Build configuration list for PBXProject "PennApps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8669D0D61B9A73D0008FEBC7 /* Debug */,
-				8669D0D71B9A73D0008FEBC7 /* Release */,
+				3BD217401B9AB4E800C85ED4 /* Debug */,
+				3BD217411B9AB4E800C85ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8669D0D81B9A73D0008FEBC7 /* Build configuration list for PBXNativeTarget "PennApps" */ = {
+		3BD217421B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennApps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8669D0D91B9A73D0008FEBC7 /* Debug */,
-				8669D0DA1B9A73D0008FEBC7 /* Release */,
+				3BD217431B9AB4E800C85ED4 /* Debug */,
+				3BD217441B9AB4E800C85ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		8669D0DB1B9A73D0008FEBC7 /* Build configuration list for PBXNativeTarget "PennAppsTests" */ = {
+		3BD217451B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennAppsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8669D0DC1B9A73D0008FEBC7 /* Debug */,
-				8669D0DD1B9A73D0008FEBC7 /* Release */,
+				3BD217461B9AB4E800C85ED4 /* Debug */,
+				3BD217471B9AB4E800C85ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		3BD217481B9AB4E800C85ED4 /* Build configuration list for PBXNativeTarget "PennAppsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD217491B9AB4E800C85ED4 /* Debug */,
+				3BD2174A1B9AB4E800C85ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8669D0B11B9A73D0008FEBC7 /* Project object */;
+	rootObject = 3BD2170D1B9AB4E800C85ED4 /* Project object */;
 }

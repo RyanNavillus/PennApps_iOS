@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8669D0B81B9A73D0008FEBC7"
+               BlueprintIdentifier = "3BD217141B9AB4E800C85ED4"
                BuildableName = "PennApps.app"
                BlueprintName = "PennApps"
                ReferencedContainer = "container:PennApps.xcodeproj">
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8669D0CD1B9A73D0008FEBC7"
+               BlueprintIdentifier = "3BD2172D1B9AB4E800C85ED4"
                BuildableName = "PennAppsTests.xctest"
                BlueprintName = "PennAppsTests"
+               ReferencedContainer = "container:PennApps.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BD217381B9AB4E800C85ED4"
+               BuildableName = "PennAppsUITests.xctest"
+               BlueprintName = "PennAppsUITests"
                ReferencedContainer = "container:PennApps.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8669D0B81B9A73D0008FEBC7"
+            BlueprintIdentifier = "3BD217141B9AB4E800C85ED4"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
             ReferencedContainer = "container:PennApps.xcodeproj">
@@ -65,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8669D0B81B9A73D0008FEBC7"
+            BlueprintIdentifier = "3BD217141B9AB4E800C85ED4"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
             ReferencedContainer = "container:PennApps.xcodeproj">
@@ -84,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8669D0B81B9A73D0008FEBC7"
+            BlueprintIdentifier = "3BD217141B9AB4E800C85ED4"
             BuildableName = "PennApps.app"
             BlueprintName = "PennApps"
             ReferencedContainer = "container:PennApps.xcodeproj">
