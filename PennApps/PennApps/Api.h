@@ -11,5 +11,7 @@
 @interface Api : NSObject
 + (instancetype)sharedApi;
 -(void)getHelloWorld;
--(void)postLoginInfoWithUserName:(NSString *)username andPassword:(NSString *)password;
+-(void)loginWithUserName:(NSString *)username andPassword:(NSString *)password;
+-(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
+
 @end

@@ -86,7 +86,7 @@
     
     
     //API STUFF
-    [[Api sharedApi] postLoginInfoWithUserName:userName andPassword:password];
+    [[Api sharedApi] loginWithUserName:userName andPassword:password];
     
 }
 @end
