@@ -8,11 +8,14 @@
 
 #import "loginView.h"
 #import "Api.h"
+#import "Doctor.h"
 @interface loginView()
 @property UILabel* loginLabel;
 @property UITextField* userNameField;
 @property UITextField* passwordField;
 @property UIButton* submitButton;
+@property Doctor* doctor;
+
 @end
 
 @implementation loginView
@@ -86,7 +89,7 @@
     
     
     //API STUFF
-    [[Api sharedApi] loginWithUserName:userName andPassword:password];
-    
+    self.doctor = [[Api sharedApi] loginWithUserName:userName andPassword:password];
+    //Core Data
 }
 @end

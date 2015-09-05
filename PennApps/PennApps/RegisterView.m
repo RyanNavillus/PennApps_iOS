@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "RegisterView.h"
 #import "Api.h"
-#import "Doctor.h"
 @interface RegisterView()
 @property UILabel* registrationLabel;
 @property UITextField* name;
@@ -17,7 +16,6 @@
 @property UITextField* userName;
 @property UITextField* password;
 @property UIButton* submitButton;
-@property Doctor* doctor;
 @end
 
 @implementation RegisterView
@@ -108,7 +106,6 @@
     
     //API STUFF
 
-    self.doctor = [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
-    //Save in Core Data
+    [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
 }
 @end
