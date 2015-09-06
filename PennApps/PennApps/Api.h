@@ -12,11 +12,11 @@
 
 @interface Api : NSObject
 + (instancetype)sharedApi;
--(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password;
--(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
+-(Doctor *)loginWithUsername:(NSString *)username andPassword:(NSString *)password;
+-(void)registerWithUsername:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
 -(void)createNewMessage:(NSString *)message FromSenderType:(NSString *)senderType WithCID:(NSString *)cid;
--(NSDictionary *)getQuestionListWithuserName:(NSString *)username;
--(NSDictionary *)getConversationListWithuserName:(NSString *)username;
+-(NSDictionary *)getQuestionListWithUsername:(NSString *)username;
+-(NSDictionary *)getConversationListWithUsername:(NSString *)username;
 -(NSDictionary *)getMessagesFrom:(NSString *)start To:(NSString *)end WithCID:(NSString *)cid;
 
 

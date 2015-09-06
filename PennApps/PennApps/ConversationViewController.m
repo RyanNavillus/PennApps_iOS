@@ -45,7 +45,7 @@
     // add to canvas
     [self.view addSubview:tableView];
     
-    NSDictionary *cvs = [[Api sharedApi] getConversationListWithuserName:self.username];
+    NSDictionary *cvs = [[Api sharedApi] getConversationListWithUsername:self.username];
     
     NSEnumerator *enumerator = [cvs keyEnumerator];
     id key;
@@ -77,7 +77,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.descriptionLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"question"];
+    cell.descriptionLabel.text = [self.conversations objectAtIndex:[TableCustomCell getInstances]];
     [TableCustomCell addInstance];
     return cell;
 }

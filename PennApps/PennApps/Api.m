@@ -29,7 +29,7 @@ static Api* kSharedApi;
 }
 
 
--(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
+-(Doctor *)loginWithUsername:(NSString *)username andPassword:(NSString *)password{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"login"];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -65,7 +65,7 @@ static Api* kSharedApi;
     return doctor;
 }
 
--(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name{
+-(void)registerWithUsername:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"register"];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -172,7 +172,7 @@ static Api* kSharedApi;
     return json;
 }
 
--(NSDictionary *)getQuestionListWithUserName:(NSString *)username{
+-(NSDictionary *)getQuestionListWithUsername:(NSString *)username{
     // 1
     NSString *dataUrl = @"doclist";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -197,6 +197,7 @@ static Api* kSharedApi;
             if(data){
                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSLog(@"%@", json);
+                
             }
         }];
         
@@ -206,7 +207,7 @@ static Api* kSharedApi;
     return json;
     
 }
--(NSDictionary *)getConversationListWithUserName:(NSString *)username{
+-(NSDictionary *)getConversationListWithUsername:(NSString *)username{
     // 1
     NSString *dataUrl = @"getconvo";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -220,7 +221,7 @@ static Api* kSharedApi;
     request.HTTPMethod = @"POST";
     
     // 3
-    NSDictionary *dictionary = @{@"username":username};
+    NSDictionary *dictionary = @{@"uname":username};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
@@ -231,6 +232,9 @@ static Api* kSharedApi;
             if(data){
                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSLog(@"%@", json);
+                NSLog(@"%@", [(NSDictionary *)[json objectForKey:@"0"] objectForKey:@"question"]);
+                //dictionary of dictionaries
+                
             }
         }];
         

@@ -66,7 +66,7 @@
     
     //API STUFF
     
-    [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
+    [[Api sharedApi] registerWithUsername:uName Password:passwd Specialty:specialty Name:fName];
     LoginViewController *vc = [[LoginViewController alloc] init];
     [self presentViewController:vc animated:YES completion:nil];
 
