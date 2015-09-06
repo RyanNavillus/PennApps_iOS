@@ -47,7 +47,7 @@ static Api* kSharedApi;
     NSDictionary *dictionary = @{@"username": username, @"password" : password};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
-    Doctor *doctor = [[Doctor alloc] init];
+    Doctor *doctor = [[Doctor alloc] initWithProperties:@{@"user":@"aep000", password: @"emerson1", @"ID": @"1", @"specialty" : @"Dentist", @"name" : username}];
     
     if (!error) {
         // 4

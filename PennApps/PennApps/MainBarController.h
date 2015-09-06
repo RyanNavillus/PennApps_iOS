@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Doctor.h"
 
 @interface MainBarController : UITabBarController
-
+-(instancetype)initWithDoctor:(Doctor *)doctor;
 @end

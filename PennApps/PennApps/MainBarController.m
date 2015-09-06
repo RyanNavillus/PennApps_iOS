@@ -7,7 +7,6 @@
 //
 
 #import "MainBarController.h"
-#import "Doctor.h"
 @interface MainBarController ()
 @property Doctor* doctor;
 @end

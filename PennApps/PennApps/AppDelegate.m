@@ -23,13 +23,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //LGChatController *lg = [[LGChatController alloc] init];
     
-    //LoginViewController *vc = [[LoginViewController alloc] init];
+    LoginViewController *vc = [[LoginViewController alloc] init];
     MainBarController *bc = [[MainBarController alloc] init];
     ConversationViewController *cc = [[ConversationViewController alloc] init];
     [bc addChildViewController:cc];
     QuestionViewController *qc = [[QuestionViewController alloc] init];
     [bc addChildViewController:qc];
-    self.window.rootViewController = bc;
+    self.window.rootViewController = vc;
     return YES;
 }
 

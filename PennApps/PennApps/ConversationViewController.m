@@ -30,7 +30,7 @@
     if(self){
         self.doctor = doctor;
         __block NSDictionary *json;
-       [[Api sharedApi] getConversationListWithUsername:self.username andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+       [[Api sharedApi] getConversationListWithUsername:self.doctor.name andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             if(data){
                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSLog(@"%@", json);
@@ -104,7 +104,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.cid = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"cid"];
+    self.cid = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"cid"];
     cell.descriptionLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"question"];
 
     cell.nameLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"sendername"];
