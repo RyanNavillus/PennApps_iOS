@@ -172,7 +172,7 @@ static Api* kSharedApi;
     return json;
 }
 
--(NSDictionary *)getQuestionListWithUsername:(NSString *)username{
+-(NSDictionary *)getQuestionListWithUsername:(NSString *)username WithAmount:(NSString *)amount andHandler:(void (^)(NSData* data, NSURLResponse* response, NSError* error))handler{
     // 1
     NSString *dataUrl = @"doclist";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -186,20 +186,14 @@ static Api* kSharedApi;
     request.HTTPMethod = @"POST";
     
     // 3
-    NSDictionary *dictionary = @{@"username":username};
+    NSDictionary *dictionary = @{@"uid":username, @"amount" : amount};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
     __block NSDictionary *json;
     if (!error) {
         // 4
-        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-            if(data){
-                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-                NSLog(@"%@", json);
-                
-            }
-        }];
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:handler];
         
         // 5
         [dataTask resume];
@@ -207,8 +201,9 @@ static Api* kSharedApi;
     return json;
     
 }
--(NSDictionary *)getConversationListWithUsername:(NSString *)username{
+-(void)getConversationListWithUsername:(NSString *)username andHandler:(void (^)(NSData* data, NSURLResponse* response, NSError* error))handler{
     // 1
+    NSLog(@"Getting Conversation List");
     NSString *dataUrl = @"getconvo";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -225,24 +220,13 @@ static Api* kSharedApi;
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
-    __block NSDictionary *json;
     if (!error) {
         // 4
-        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
-            if(data){
-                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-                NSLog(@"%@", json);
-                NSLog(@"%@", [(NSDictionary *)[json objectForKey:@"0"] objectForKey:@"question"]);
-                //dictionary of dictionaries
-                
-            }
-        }];
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:handler];
         
         // 5
         [dataTask resume];
     }
-    return json;
-    
 }
 
 @end

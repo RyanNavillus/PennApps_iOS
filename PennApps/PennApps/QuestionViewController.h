@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionViewController : UIViewController
+@interface QuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+-(instancetype)initWithUsername:(NSString *)username;
 
 @end

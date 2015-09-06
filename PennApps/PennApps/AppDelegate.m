@@ -9,19 +9,29 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ConversationViewController.h"
+#import "QuestionViewController.h"
 #import "DataManager.h"
 #import "LoginViewController.h"
-
+#import "MainBarController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
 //    ViewController *vc = [[ViewController alloc] init];
 //    self.window.rootViewController = vc;
+
+//    ConversationViewController *cc = [[ConversationViewController alloc] initWithUsername:@"aep000"];
+//    //LoginViewController *vc = [[LoginViewController alloc] init];
+//    MainBarController *vc = [[MainBarController alloc] init];
+//    [vc addChildViewController:cc];
+//    QuestionViewController *qc = [[QuestionViewController alloc] initWithUsername:@"aep000"];
+//    [vc addChildViewController:qc];
+//    self.window.rootViewController = vc;
+
     return YES;
 }
 
