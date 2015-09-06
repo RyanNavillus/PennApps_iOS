@@ -107,18 +107,14 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.specialty attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.userName attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.password attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-48-[name]-48-|" options:0 metrics:nil views:@{@"name" : self.name}]];
        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-48-[specialty]-48-|" options:0 metrics:nil views:@{@"specialty" : self.specialty}]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-48-[userName]-48-|" options:0 metrics:nil views:@{@"userName" : self.userName}]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-48-[password]-48-|" options:0 metrics:nil views:@{@"password" : self.password}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-48-[submitButton]-48-|" options:0 metrics:nil views:@{@"submitButton" : self.submitButton}]];
-    
-    
     
     //Vertical
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[logoView(96)]-16-[registrationLabel(20)]-16-[name(20)]-16-[specialty(20)]-16-[userName(20)]-16-[password(20)]-16-[submitButton(30)]-(>=40)-|" options:0 metrics:nil views:@{@"logoView" : self.logoView, @"registrationLabel" : self.registrationLabel, @"name" : self.name, @"specialty" : self.specialty, @"userName" : self.userName, @"password" : self.password, @"submitButton" : self.submitButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[logoView(96)]-16-[registrationLabel(20)]-16-[name(20)]-16-[specialty(20)]-16-[userName(20)]-16-[password(20)]-(>=50)-|" options:0 metrics:nil views:@{@"logoView" : self.logoView, @"registrationLabel" : self.registrationLabel, @"name" : self.name, @"specialty" : self.specialty, @"userName" : self.userName, @"password" : self.password}]];
     
 }
 

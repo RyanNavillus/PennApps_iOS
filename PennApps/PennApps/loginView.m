@@ -119,14 +119,17 @@
 
 -(void)submitButtonPressed{
     NSLog(@"Hi");
-    NSString *userName = [[NSString alloc] init];
-    userName = self.userNameField.text;
-    NSString *password = [[NSString alloc] init];
-    password = self.passwordField.text;
     
-    
+    [[Api sharedApi] getMessagesFrom:@"0" To:@"20" WithCID:@"2"];
+    //[[Api sharedApi] createNewMessage:@"hi" FromSenderType:@"1" WithCID:@"2"];
+//    NSString *userName = [[NSString alloc] init];
+//    userName = self.userNameField.text;
+//    NSString *password = [[NSString alloc] init];
+//    password = self.passwordField.text;
+//
+//    
     //API STUFF
-    [[Api sharedApi] createNewMessage:@"Hello World" FromSenderType:@"1" WithCID:@"1"];
+    //[[Api sharedApi] createNewMessage:@"Hello World" FromSenderType:@"1" WithCID:@"1"];
     //self.doctor = [[Api sharedApi] loginWithUserName:userName andPassword:password];
     //Core Data
 }

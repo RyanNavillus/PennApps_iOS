@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "RegisterView.h"
 #import "Api.h"
+#import "LoginViewController.h"
 @interface RegisterViewController ()
 @property UIButton* submitButton;
 @end
@@ -36,7 +37,10 @@
     self.submitButton.layer.shadowRadius = 3.f;
     self.submitButton.layer.shadowOffset = CGSizeMake(2.f, 2.f);
     [self.view addSubview:self.submitButton];
-
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:30.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:120.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.submitButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-210.f]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,8 +54,22 @@
 }
 
 -(void)submitButtonPressed{
-
+    NSString *fName = [[NSString alloc] init];
+    fName = ((RegisterView *)self.view).name.text;
+    NSString *specialty = [[NSString alloc] init];
+    specialty = ((RegisterView *)self.view).specialty.text;
+    NSString *uName = [[NSString alloc] init];
+    uName = ((RegisterView *)self.view).userName.text;
+    NSString *passwd = [[NSString alloc] init];
+    passwd = ((RegisterView *)self.view).password.text;
     
+    
+    //API STUFF
+    
+    [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+
 }
 /*
 #pragma mark - Navigation
