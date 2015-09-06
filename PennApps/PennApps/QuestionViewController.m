@@ -17,6 +17,7 @@
 @property NSString* username;
 @property UITableView* tableView;
 @property NSUInteger instances;
+@property NSString* cid;
 @end
 
 @implementation QuestionViewController
@@ -98,6 +99,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+    self.cid = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"cid"];
     cell.descriptionLabel.text = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"question"];
 
     cell.nameLabel.text = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"sendername"];

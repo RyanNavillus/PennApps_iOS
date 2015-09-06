@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ConversationViewController.h"
-@interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 -(instancetype)initWithUsername:(NSString *)username;
 
 @end
