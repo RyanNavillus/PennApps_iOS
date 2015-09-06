@@ -126,10 +126,9 @@
         NSLog(@"long press on table view but not on a row");
     else {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        CGPoint pointInCell = [cell convertPoint:p fromView:self.tableView];
-        [self.tableView indexPathForCell:cell];
-        NSLog(@"cell number");
     }
 }
+
+
 @end
 

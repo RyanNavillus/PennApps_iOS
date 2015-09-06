@@ -11,6 +11,7 @@
 		3B6E1D7E1B9BE23E0069F1ED /* MainBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E1D7D1B9BE23E0069F1ED /* MainBarController.m */; settings = {ASSET_TAGS = (); }; };
 		3B6E1D811B9BE9080069F1ED /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E1D801B9BE9080069F1ED /* QuestionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3B6E1D841B9BFA790069F1ED /* messageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E1D831B9BFA790069F1ED /* messageView.m */; settings = {ASSET_TAGS = (); }; };
+		3B6E1D871B9C5F150069F1ED /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E1D861B9C5F150069F1ED /* MessageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD217191B9AB4E800C85ED4 /* main.m */; };
 		3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2171C1B9AB4E800C85ED4 /* AppDelegate.m */; };
 		3BD217201B9AB4E800C85ED4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2171F1B9AB4E800C85ED4 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		3B6E1D801B9BE9080069F1ED /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		3B6E1D821B9BFA790069F1ED /* messageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageView.h; sourceTree = "<group>"; };
 		3B6E1D831B9BFA790069F1ED /* messageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageView.m; sourceTree = "<group>"; };
+		3B6E1D851B9C5F150069F1ED /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		3B6E1D861B9C5F150069F1ED /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		3BD217151B9AB4E800C85ED4 /* PennApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD217191B9AB4E800C85ED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD2171B1B9AB4E800C85ED4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				3BD2171F1B9AB4E800C85ED4 /* ViewController.m */,
 				3B6E1D821B9BFA790069F1ED /* messageView.h */,
 				3B6E1D831B9BFA790069F1ED /* messageView.m */,
+				3B6E1D851B9C5F150069F1ED /* MessageViewController.h */,
+				3B6E1D861B9C5F150069F1ED /* MessageViewController.m */,
 				3BD217591B9B3C4D00C85ED4 /* Doctor.h */,
 				3BD2175A1B9B3C4D00C85ED4 /* Doctor.m */,
 				3BD2174B1B9AB52B00C85ED4 /* loginView.h */,
@@ -347,6 +352,7 @@
 				3BD2175B1B9B3C4D00C85ED4 /* Doctor.m in Sources */,
 				3BD2171D1B9AB4E800C85ED4 /* AppDelegate.m in Sources */,
 				3BD2174D1B9AB52B00C85ED4 /* loginView.m in Sources */,
+				3B6E1D871B9C5F150069F1ED /* MessageViewController.m in Sources */,
 				3B6E1D7B1B9BC6DF0069F1ED /* LGSimpleChat.swift in Sources */,
 				3BD2171A1B9AB4E800C85ED4 /* main.m in Sources */,
 				866CFDD61B9B290600B23536 /* TableCustomCell.m in Sources */,

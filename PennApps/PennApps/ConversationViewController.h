@@ -9,7 +9,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ConversationViewController.h"
-@interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
+#import "PennApps-Swift.h"
+
+@interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, LGChatControllerDelegate>
 -(instancetype)initWithUsername:(NSString *)username;
 
 @end

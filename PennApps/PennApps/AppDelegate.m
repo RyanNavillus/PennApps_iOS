@@ -13,6 +13,7 @@
 #import "DataManager.h"
 #import "LoginViewController.h"
 #import "MainBarController.h"
+#import "PennApps-Swift.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //LGChatController *lg = [[LGChatController alloc] init];
     
     LoginViewController *vc = [[LoginViewController alloc] init];
     self.window.rootViewController = vc;
