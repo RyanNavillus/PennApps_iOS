@@ -186,7 +186,7 @@ static Api* kSharedApi;
     request.HTTPMethod = @"POST";
     
     // 3
-    NSDictionary *dictionary = @{@"uid":username, @"amount" : amount};
+    NSDictionary *dictionary = @{@"uname":username, @"amount" : amount};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     

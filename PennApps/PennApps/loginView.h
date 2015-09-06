@@ -10,5 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface loginView : UIView
-
+@property UITextField* userNameField;
+@property UITextField* passwordField;
 @end

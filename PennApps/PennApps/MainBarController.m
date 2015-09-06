@@ -7,12 +7,20 @@
 //
 
 #import "MainBarController.h"
-
+#import "Doctor.h"
 @interface MainBarController ()
-
+@property Doctor* doctor;
 @end
 
 @implementation MainBarController
+
+-(instancetype)initWithDoctor:(Doctor *)doctor{
+    self = [super init];
+    if(self){
+        self.doctor = doctor;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

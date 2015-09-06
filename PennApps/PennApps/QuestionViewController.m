@@ -39,12 +39,10 @@
                 while ((key = [enumerator nextObject])) {
                     [self.questions addObject:[json objectForKey:key]];
                 }
+                [self.tableView reloadData];
             }
             
         }];
-        while([self.questions count] == 0){
-            NSLog(@"Hi");
-        }
     }
     return self;
 }
@@ -99,7 +97,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    self.cid = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"cid"];
+    cell.cid = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"cid"];
     cell.descriptionLabel.text = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"question"];
 
     cell.nameLabel.text = [((NSDictionary *)[self.questions objectAtIndex:self.instances]) objectForKey:@"sendername"];

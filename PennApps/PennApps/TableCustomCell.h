@@ -13,6 +13,7 @@
 // now only showing one label, you can add more yourself
 @property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) NSString *cid;
 +(void)addInstance;
 +(void)removeInstance;
 +(NSUInteger)getInstances;

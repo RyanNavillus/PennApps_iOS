@@ -40,12 +40,10 @@
                 while ((key = [enumerator nextObject])) {
                     [self.conversations addObject:[json objectForKey:key]];
                 }
+                [self.tableView reloadData];
             }
 
         }];
-        while([self.conversations count] == 0){
-            NSLog(@"Hi");
-        }
     }
     return self;
 }
@@ -67,7 +65,7 @@
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     // add to canvas
     [self.view addSubview:self.tableView];
-    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tableViewPress:)];
     [self.tableView  addGestureRecognizer:tapGesture];
     tapGesture.cancelsTouchesInView = YES;
     tapGesture.delegate = self;
@@ -104,7 +102,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    self.cid = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"cid"];
+    cell.cid = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"cid"];
     cell.descriptionLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"question"];
 
     cell.nameLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"sendername"];
@@ -120,7 +118,7 @@
     [self.tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:@{@"tableView" : self.tableView}]];
 }
 
-- (void) tableViewLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
+- (void) tableViewPress:(UILongPressGestureRecognizer *)gestureRecognizer {
     CGPoint p = [gestureRecognizer locationInView:self.tableView];
     
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
@@ -129,6 +127,8 @@
     else {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
         CGPoint pointInCell = [cell convertPoint:p fromView:self.tableView];
+        [self.tableView indexPathForCell:cell];
+        NSLog(@"cell number");
     }
 }
 @end

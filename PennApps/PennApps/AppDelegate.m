@@ -20,12 +20,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    ConversationViewController *cc = [[ConversationViewController alloc] initWithUsername:@"aep000"];
-    //LoginViewController *vc = [[LoginViewController alloc] init];
-    MainBarController *vc = [[MainBarController alloc] init];
-    [vc addChildViewController:cc];
-    QuestionViewController *qc = [[QuestionViewController alloc] initWithUsername:@"aep000"];
-    [vc addChildViewController:qc];
+    
+    LoginViewController *vc = [[LoginViewController alloc] init];
     self.window.rootViewController = vc;
     return YES;
 }
