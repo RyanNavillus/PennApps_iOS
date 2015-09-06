@@ -8,8 +8,8 @@
 
 
 #import <UIKit/UIKit.h>
-
+#import "ConversationViewController.h"
 @interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-
+-(instancetype)initWithUsername:(NSString *)username;
 
 @end

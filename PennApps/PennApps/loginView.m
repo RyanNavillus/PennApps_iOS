@@ -126,7 +126,9 @@
 //    password = self.passwordField.text;
 //
 //    self.doctor = [[Api sharedApi] loginWithUsername:userName andPassword:password];
-    [[Api sharedApi] getConversationListWithUsername:@"aep000"];
+    [[Api sharedApi] getConversationListWithUsername:@"aep000" andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSLog(@"Hi");
+    }];
 }
 
 @end

@@ -15,6 +15,7 @@
 -(void)viewDidLoad;
 @property NSMutableArray *conversations;
 @property NSString* username;
+@property UITableView* tableView;
 @end
 
 @implementation ConversationViewController {
@@ -25,6 +26,25 @@
     self = [super init];
     if(self){
         self.username = username;
+        __block NSDictionary *json;
+       [[Api sharedApi] getConversationListWithUsername:self.username andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            if(data){
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                NSLog(@"%@", json);
+                NSLog(@"%@", [(NSDictionary *)[json objectForKey:@"0"] objectForKey:@"question"]);
+                //dictionary of dictionaries
+                self.conversations = [[NSMutableArray alloc] init];
+                NSEnumerator *enumerator = [json keyEnumerator];
+                id key;
+                while ((key = [enumerator nextObject])) {
+                    [self.conversations addObject:[json objectForKey:key]];
+                }
+            }
+
+        }];
+        while([self.conversations count] == 0){
+            NSLog(@"Hi");
+        }
     }
     return self;
 }
@@ -32,27 +52,21 @@
     
     [super viewDidLoad];
     // init table view
-    tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     //or, you may do that
     //tableView = [[UITableView alloc] init];
     //tableView.frame = CGRectMake:(5 , 5 , 320 , 300);
     
     // must set delegate & dataSource, otherwise the the table will be empty and not responsive
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.backgroundColor = [UIColor cyanColor];
-    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor colorWithRed:234/255.0 green:230/255.0 blue:234/255.0 alpha:1.0];
+;
+    self.tableView.allowsSelection = NO;
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     // add to canvas
-    [self.view addSubview:tableView];
-    
-    NSDictionary *cvs = [[Api sharedApi] getConversationListWithUsername:self.username];
-    
-    NSEnumerator *enumerator = [cvs keyEnumerator];
-    id key;
-    while ((key = [enumerator nextObject])) {
-        [self.conversations addObject:[cvs objectForKey:key]];
+    [self.view addSubview:self.tableView];
     }
-}
 
 #pragma mark - UITableViewDataSource
 // number of section(s), now I assume there is only 1 section
@@ -67,6 +81,14 @@
     return [self.conversations count];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30.f;
+}
+
+- (CGFloat)tableView:(UITableView *)theTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80.f;
+}
+
 // the cell will be returned to the tableView
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -77,9 +99,19 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.descriptionLabel.text = [self.conversations objectAtIndex:[TableCustomCell getInstances]];
+    cell.descriptionLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"question"];
+
+    cell.nameLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"sendername"];
     [TableCustomCell addInstance];
     return cell;
+}
+
+-(void)createConstraints{
+    //Horizontal
+    [self.tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:@{@"tableView" : self.tableView}]];
+    
+    //Vertical
+    [self.tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:@{@"tableView" : self.tableView}]];
 }
 
 @end
