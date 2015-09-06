@@ -15,7 +15,8 @@
 -(Doctor *)loginWithUserName:(NSString *)username andPassword:(NSString *)password;
 -(void)registerWithUserName:(NSString *)username Password:(NSString *)password Specialty:(NSString *)specialty Name:(NSString *)name;
 -(void)createNewMessage:(NSString *)message FromSenderType:(NSString *)senderType WithCID:(NSString *)cid;
--(NSDictionary *)getConversationList;
+-(NSDictionary *)getQuestionListWithuserName:(NSString *)username;
+-(NSDictionary *)getConversationListWithuserName:(NSString *)username;
 -(NSDictionary *)getMessagesFrom:(NSString *)start To:(NSString *)end WithCID:(NSString *)cid;
 
 

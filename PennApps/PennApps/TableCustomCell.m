@@ -13,6 +13,7 @@ static NSUInteger instances;
 @implementation TableCustomCell
 
 @synthesize descriptionLabel = _descriptionLabel;
+@synthesize nameLabel = _nameLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "loginView.h"
 #import "RegisterView.h"
-#import "InboxView.h"
+#import "ConversationViewController.h"
 #import "PennApps-Swift.h"
 
 @interface ViewController () <LGChatControllerDelegate>

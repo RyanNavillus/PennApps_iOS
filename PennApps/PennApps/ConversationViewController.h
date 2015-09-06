@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InboxView : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "InboxView.h"
+#import "ConversationViewController.h"
 #import "DataManager.h"
 #import "LoginViewController.h"
 

@@ -8,18 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-#import "InboxView.h"
+#import "ConversationViewController.h"
 #import "TableCustomCell.h"
 #import "Api.h"
-@interface InboxView()
+@interface ConversationViewController()
 -(void)viewDidLoad;
 @property NSMutableArray *conversations;
+@property NSString* username;
 @end
 
-@implementation InboxView {
+@implementation ConversationViewController {
         UITableView *tableView;
 }
 
+-(instancetype)initWithUsername:(NSString *)username{
+    self = [super init];
+    if(self){
+        self.username = username;
+    }
+    return self;
+}
 - (void)viewDidLoad{
     
     [super viewDidLoad];
@@ -37,7 +45,7 @@
     // add to canvas
     [self.view addSubview:tableView];
     
-    NSDictionary *cvs = [[Api sharedApi] getConversationList];
+    NSDictionary *cvs = [[Api sharedApi] getConversationListWithuserName:self.username];
     
     NSEnumerator *enumerator = [cvs keyEnumerator];
     id key;
@@ -56,7 +64,7 @@
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.conversations count];
 }
 
 // the cell will be returned to the tableView
@@ -69,8 +77,7 @@
     if (cell == nil) {
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    // Just want to test, so I hardcode the data
-    cell.descriptionLabel.text = [self.conversations objectAtIndex:[TableCustomCell getInstances]];
+    cell.descriptionLabel.text = [((NSDictionary *)[self.conversations objectAtIndex:[TableCustomCell getInstances]]) objectForKey:@"question"];
     [TableCustomCell addInstance];
     return cell;
 }

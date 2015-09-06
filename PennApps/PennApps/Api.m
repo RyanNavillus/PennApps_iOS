@@ -100,7 +100,7 @@ static Api* kSharedApi;
     
 }
 
--(void)createNewMessage:(NSString *)message FromSenderType:(NSString *)senderType WithCID:(NSString *)cid{
+-(void)createNewMessage:(NSString *)message FromSenderType:(NSString *)senderType WithCID:(NSString *)cid FromUsername:(NSString *)username{
     // 1
     NSURL *dataUrl = [NSURL URLWithString:@"addmessage"];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
@@ -114,7 +114,7 @@ static Api* kSharedApi;
     request.HTTPMethod = @"POST";
     
     // 3
-    NSDictionary *dictionary = @{@"cid": cid, @"stype" : senderType, @"message" : message};
+    NSDictionary *dictionary = @{@"cid": cid, @"stype" : senderType, @"message" : message, @"uname": username};
     NSError *error = nil;
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
