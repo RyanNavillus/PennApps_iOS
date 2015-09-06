@@ -162,6 +162,7 @@ static Api* kSharedApi;
             if(data){
                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSLog(@"%@", json);
+                
             }
         }];
         
@@ -171,23 +172,73 @@ static Api* kSharedApi;
     return json;
 }
 
-- (NSString *)stringFromHexString:(NSString *)hexString {
+-(NSDictionary *)getQuestionListWithUserName:(NSString *)username{
+    // 1
+    NSString *dataUrl = @"doclist";
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     
-    // The hex codes should all be two characters.
-    if (([hexString length] % 2) != 0)
-        return nil;
+    // 2
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    request.HTTPMethod = @"POST";
     
-    NSMutableString *string = [NSMutableString string];
+    // 3
+    NSDictionary *dictionary = @{@"username":username};
+    NSError *error = nil;
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
     
-    for (NSInteger i = 0; i < [hexString length]; i += 2) {
+    __block NSDictionary *json;
+    if (!error) {
+        // 4
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                NSLog(@"%@", json);
+            }
+        }];
         
-        NSString *hex = [hexString substringWithRange:NSMakeRange(i, 2)];
-        NSInteger decimalValue = 0;
-        sscanf([hex UTF8String], "%lx", &decimalValue);
-        [string appendFormat:@"%ld", (long)decimalValue];
+        // 5
+        [dataTask resume];
     }
+    return json;
     
-    return string;
+}
+-(NSDictionary *)getConversationListWithUserName:(NSString *)username{
+    // 1
+    NSString *dataUrl = @"getconvo";
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    // 2
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    request.HTTPMethod = @"POST";
+    
+    // 3
+    NSDictionary *dictionary = @{@"username":username};
+    NSError *error = nil;
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+    
+    __block NSDictionary *json;
+    if (!error) {
+        // 4
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                NSLog(@"%@", json);
+            }
+        }];
+        
+        // 5
+        [dataTask resume];
+    }
+    return json;
+    
 }
 
 @end

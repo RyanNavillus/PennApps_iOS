@@ -52,8 +52,7 @@
 
 
 - (void)viewDidLoad {
-    
-    self.view = [[loginView alloc] init];
+    [self launchChatController];
 }
 
 
