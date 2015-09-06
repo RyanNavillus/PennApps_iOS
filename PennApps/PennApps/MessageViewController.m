@@ -48,6 +48,7 @@
     self.view.backgroundColor = [UIColor orangeColor];
     self.messageField = [[UITextField alloc] init];
     self.messageField.textColor = [UIColor colorWithRed:234/255.0 green:230/255.0 blue:234/255.0 alpha:1.0];
+    [self.view addSubview:self.messageField];
     
     self.submitButton = [[UIButton alloc] init];
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
