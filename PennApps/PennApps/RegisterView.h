@@ -12,4 +12,8 @@
 
 @interface RegisterView : UIView
 @property(nonatomic, copy) NSString *placeholder;
+@property UITextField* name;
+@property UITextField* specialty;
+@property UITextField* userName;
+@property UITextField* password;
 @end

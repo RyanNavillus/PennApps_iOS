@@ -9,15 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "RegisterView.h"
 #import "Api.h"
+#import "RegisterViewController.h"
 #import <QuartzCore/QuartzCore.h>
 @interface RegisterView()
 @property UIImageView* logoView;
 @property UILabel* registrationLabel;
-@property UITextField* name;
-@property UITextField* specialty;
-@property UITextField* userName;
-@property UITextField* password;
-@property UIButton* submitButton;
 @end
 
 @implementation RegisterView
@@ -39,7 +35,6 @@
     self.logoView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.logoView];
     
-    
     self.registrationLabel = [[UILabel alloc] init];
     self.registrationLabel.numberOfLines = 0;
     self.registrationLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -49,8 +44,6 @@
     self.registrationLabel.font = [UIFont fontWithName:@"Helvetica" size:18.f];
     self.registrationLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.registrationLabel];
-
-    
     
     self.name = [[UITextField alloc] init];
     self.name.translatesAutoresizingMaskIntoConstraints = NO;
@@ -65,7 +58,6 @@
 
     self.name.tag = 1;
     
-    
     self.specialty = [[UITextField alloc] init];
     self.specialty.translatesAutoresizingMaskIntoConstraints = NO;
     self.specialty.placeholder = @"Medical Profession";
@@ -76,8 +68,6 @@
     self.specialty.textColor = [UIColor colorWithRed:100/255.0 green:100/255.0 blue:100/255.0 alpha:1.0];
     self.specialty.font = [UIFont fontWithName:@"Helvetica" size:14.f];
     [self addSubview:self.specialty];
-
-
 
     self.userName = [[UITextField alloc] init];
     self.userName.translatesAutoresizingMaskIntoConstraints = NO;
@@ -91,8 +81,6 @@
     [self addSubview:self.userName];
     self.userName.tag = 3;
     [self addSubview:self.userName];
-
-
     
     self.password = [[UITextField alloc] init];
     self.password.translatesAutoresizingMaskIntoConstraints = NO;
@@ -106,25 +94,6 @@
     self.password.font = [UIFont fontWithName:@"Helvetica" size:14.f];
     [self addSubview:self.password];
 
-
-
-    self.submitButton = [[UIButton alloc] init];
-    [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
-    self.submitButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.submitButton addTarget:self action:@selector(submitButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    self.submitButton.backgroundColor = [UIColor colorWithRed:234/255.0 green:230/255.0 blue:234/255.0 alpha:1.0];
-    self.submitButton.layer.borderColor = [[UIColor colorWithRed:228/255.0 green:61/255.0 blue:61/255.0 alpha:1.0]CGColor];
-    self.submitButton.layer.cornerRadius = 5.0;
-    self.submitButton.layer.borderWidth = 0.5;
-    [self.submitButton setTitleColor:[UIColor colorWithRed:100/255.0 green:100/255.0 blue:100/255.0 alpha:1.0] forState:UIControlStateNormal];
-    [self.submitButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.f]];
-    self.submitButton.layer.masksToBounds = NO;
-    self.submitButton.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.submitButton.layer.shadowOpacity = 0.4;
-    self.submitButton.layer.shadowRadius = 3.f;
-    self.submitButton.layer.shadowOffset = CGSizeMake(2.f, 2.f);
-    [self addSubview:self.submitButton];
-    
     [self createConstraints];
 }
 
@@ -154,21 +123,4 @@
 }
 
 
-
--(void)submitButtonPressed{
-    NSLog(@"Hi");
-    NSString *fName = [[NSString alloc] init];
-    fName = self.name.text;
-    NSString *specialty = [[NSString alloc] init];
-    specialty = self.specialty.text;
-    NSString *uName = [[NSString alloc] init];
-    uName = self.userName.text;
-    NSString *passwd = [[NSString alloc] init];
-    passwd = self.password.text;
-    
-    
-    //API STUFF
-
-    [[Api sharedApi] registerWithUserName:uName Password:passwd Specialty:specialty Name:fName];
-}
 @end

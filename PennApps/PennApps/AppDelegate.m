@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "InboxView.h"
 #import "DataManager.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    ViewController *vc = [[ViewController alloc] init];
+    LoginViewController *vc = [[LoginViewController alloc] init];
     self.window.rootViewController = vc;
     return YES;
 }

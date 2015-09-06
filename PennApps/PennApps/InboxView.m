@@ -13,6 +13,7 @@
 #import "Api.h"
 @interface InboxView()
 -(void)viewDidLoad;
+@property NSMutableArray *conversations;
 @end
 
 @implementation InboxView {
@@ -24,7 +25,6 @@
     [super viewDidLoad];
     // init table view
     tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    
     //or, you may do that
     //tableView = [[UITableView alloc] init];
     //tableView.frame = CGRectMake:(5 , 5 , 320 , 300);
@@ -32,11 +32,18 @@
     // must set delegate & dataSource, otherwise the the table will be empty and not responsive
     tableView.delegate = self;
     tableView.dataSource = self;
-    
     tableView.backgroundColor = [UIColor cyanColor];
     
     // add to canvas
     [self.view addSubview:tableView];
+    
+    NSDictionary *cvs = [[Api sharedApi] getConversationList];
+    
+    NSEnumerator *enumerator = [cvs keyEnumerator];
+    id key;
+    while ((key = [enumerator nextObject])) {
+        [self.conversations addObject:[cvs objectForKey:key]];
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -49,7 +56,7 @@
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 3;
 }
 
 // the cell will be returned to the tableView
@@ -63,8 +70,8 @@
         cell = [[TableCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     // Just want to test, so I hardcode the data
-    cell.descriptionLabel.text = @"Testing";
-    
+    cell.descriptionLabel.text = [self.conversations objectAtIndex:[TableCustomCell getInstances]];
+    [TableCustomCell addInstance];
     return cell;
 }
 

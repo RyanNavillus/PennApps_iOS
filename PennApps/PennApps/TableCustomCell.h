@@ -12,5 +12,7 @@
 
 // now only showing one label, you can add more yourself
 @property (nonatomic, strong) UILabel *descriptionLabel;
-
++(void)addInstance;
++(void)removeInstance;
++(NSUInteger)getInstances;
 @end

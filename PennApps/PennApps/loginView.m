@@ -9,6 +9,8 @@
 #import "loginView.h"
 #import "Api.h"
 #import "Doctor.h"
+#import "RegisterView.h"
+#import "LoginViewController.h"
 @interface loginView()
 @property UIImageView* logoView;
 @property UILabel* loginLabel;
@@ -89,6 +91,7 @@
     self.submitButton.layer.shadowOffset = CGSizeMake(2.f, 2.f);
     [self addSubview:self.submitButton];
     
+
     [self createConstraints];
 }
 
@@ -127,4 +130,5 @@
     //self.doctor = [[Api sharedApi] loginWithUserName:userName andPassword:password];
     //Core Data
 }
+
 @end

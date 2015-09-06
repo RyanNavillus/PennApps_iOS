@@ -8,6 +8,7 @@
 
 #import "TableCustomCell.h"
 #import <Foundation/Foundation.h>
+static NSUInteger instances;
 
 @implementation TableCustomCell
 
@@ -20,11 +21,20 @@
         // configure control(s)
         self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 300, 30)];
         self.descriptionLabel.textColor = [UIColor blackColor];
-        self.descriptionLabel.font = [UIFont fontWithName:@"Arial" size:16.0f];
+        self.descriptionLabel.font = [UIFont fontWithName:@"Helvetica" size:16.0f];
         
         [self addSubview:self.descriptionLabel];
     }
     return self;
 }
 
++(void)addInstance{
+    instances++;
+}
++(void)removeInstance{
+    instances--;
+}
++(NSUInteger)getInstances{
+    return instances;
+}
 @end

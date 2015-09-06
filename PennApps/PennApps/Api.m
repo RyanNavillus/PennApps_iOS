@@ -135,24 +135,38 @@ static Api* kSharedApi;
     
 }
 
--(void)getConversationList{
+-(NSDictionary *)getConversationListWithUserName:(NSString *)userName{
     // 1
     NSString *dataUrl = @"conversations";
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@%@", kBaseURLString, dataUrl]];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
     // 2
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if(data){
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:NSJSONReadingMutableContainers
-                                                                   error:&error];
-            //store value for "cid" key in Core Data
-            NSLog(@"JSON %@", json);
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    request.HTTPMethod = @"POST";
+    
+    // 3
+    NSDictionary *dictionary = @{@"username": userName};
+    NSError *error = nil;
+    [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error]];
+    
+    __block NSDictionary *json;
+    if (!error) {
+        // 4
+        NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+            if(data){
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                NSLog(@"%@", json);
+            }
+        }];
         
-        }
-    }];
-    
-    [downloadTask resume];
-    
+        // 5
+        [dataTask resume];
+    }
+    return json;
 }
 
 @end
