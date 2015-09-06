@@ -795,11 +795,18 @@ class LGStretchyTextView : UITextView, UITextViewDelegate {
     // MARK: Alignment
     
     func align() {
+        //hardcode
+        if let selectedTextRange = self.selectedTextRange {
+            let caretRect = self.caretRectForPosition(selectedTextRange.end);
+            let topOfLine = CGRectGetMinY(caretRect)
+            let bottomOfLine = CGRectGetMaxY(caretRect)
+            
+            
         
-        let caretRect: CGRect = self.caretRectForPosition((self.selectedTextRange?.end)!)
         
-        let topOfLine = CGRectGetMinY(caretRect)
-        let bottomOfLine = CGRectGetMaxY(caretRect)
+        
+        
+        
         
         let contentOffsetTop = self.contentOffset.y
         let bottomOfVisibleTextArea = contentOffsetTop + CGRectGetHeight(self.bounds)
@@ -818,6 +825,7 @@ class LGStretchyTextView : UITextView, UITextViewDelegate {
             }
             self.contentOffset.y += overflow
         }
+    }
     }
     
     // MARK: UITextViewDelegate

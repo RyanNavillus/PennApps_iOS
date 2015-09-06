@@ -20,8 +20,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    LoginViewController *vc = [[LoginViewController alloc] init];
-    self.window.rootViewController = vc;
+//    ViewController *vc = [[ViewController alloc] init];
+//    self.window.rootViewController = vc;
     return YES;
 }
 
