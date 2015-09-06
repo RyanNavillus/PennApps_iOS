@@ -11,28 +11,29 @@
 #import "ConversationViewController.h"
 #import "TableCustomCell.h"
 #import "Api.h"
+#import "MessageViewController.h"
 @interface ConversationViewController()
 -(void)viewDidLoad;
 @property NSMutableArray *conversations;
 @property NSString* username;
 @property UITableView* tableView;
 @property NSString* cid;
+@property Doctor* doctor;
 @end
 
 @implementation ConversationViewController {
         UITableView *tableView;
 }
 
--(instancetype)initWithUsername:(NSString *)username{
+-(instancetype)initWithDoctor:(Doctor *)doctor{
     self = [super init];
     if(self){
-        self.username = username;
+        self.doctor = doctor;
         __block NSDictionary *json;
        [[Api sharedApi] getConversationListWithUsername:self.username andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             if(data){
                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 NSLog(@"%@", json);
-                NSLog(@"%@", [(NSDictionary *)[json objectForKey:@"0"] objectForKey:@"question"]);
                 //dictionary of dictionaries
                 self.conversations = [[NSMutableArray alloc] init];
                 NSEnumerator *enumerator = [json keyEnumerator];
@@ -69,6 +70,7 @@
     [self.tableView  addGestureRecognizer:tapGesture];
     tapGesture.cancelsTouchesInView = YES;
     tapGesture.delegate = self;
+    [self.tableView reloadData];
     }
 
 #pragma mark - UITableViewDataSource
@@ -127,6 +129,7 @@
     else {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     }
+    [self presentViewController:[[MessageViewController alloc] initWithCID:self.cid andDoctor:self.doctor] animated:YES completion:nil];
 }
 
 

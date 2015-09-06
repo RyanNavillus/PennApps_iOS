@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Doctor.h"
 
 @interface MessageViewController : UIViewController
-
+-(instancetype) initWithCID:(NSString *)cid andDoctor:(Doctor *)doctor;
 @end

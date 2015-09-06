@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "ConversationViewController.h"
 #import "PennApps-Swift.h"
+#import "Doctor.h"
 
 @interface ConversationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, LGChatControllerDelegate>
--(instancetype)initWithUsername:(NSString *)username;
-
+-(instancetype)initWithDoctor:(Doctor *)doctor;
 @end

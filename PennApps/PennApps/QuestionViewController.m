@@ -11,6 +11,7 @@
 #import "ConversationViewController.h"
 #import "TableCustomCell.h"
 #import "Api.h"
+#import "MessageViewController.h"
 @interface QuestionViewController ()
 -(void)viewDidLoad;
 @property NSMutableArray *questions;
@@ -18,14 +19,15 @@
 @property UITableView* tableView;
 @property NSUInteger instances;
 @property NSString* cid;
+@property Doctor* doctor;
 @end
 
 @implementation QuestionViewController
 
--(instancetype)initWithUsername:(NSString *)username{
+-(instancetype)initWithDoctor:(Doctor *)doctor{
     self = [super init];
     if(self){
-        self.username = username;
+        self.doctor = doctor;
         __block NSDictionary *json;
         [[Api sharedApi] getQuestionListWithUsername:self.username WithAmount:@"50" andHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             if(data){
@@ -64,6 +66,10 @@
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     // add to canvas
     [self.view addSubview:self.tableView];
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tableViewPress:)];
+    [self.tableView  addGestureRecognizer:tapGesture];
+    tapGesture.cancelsTouchesInView = YES;
+    tapGesture.delegate = self;
 }
 
 #pragma mark - UITableViewDataSource
@@ -114,4 +120,15 @@
 }
 
 
+- (void) tableViewPress:(UILongPressGestureRecognizer *)gestureRecognizer {
+    CGPoint p = [gestureRecognizer locationInView:self.tableView];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
+    if (indexPath == nil)
+        NSLog(@"long press on table view but not on a row");
+    else {
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    }
+    [self presentViewController:[[MessageViewController alloc] initWithCID:self.cid andDoctor:self.doctor] animated:YES completion:nil];
+}
 @end

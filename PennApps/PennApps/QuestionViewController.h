@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
--(instancetype)initWithUsername:(NSString *)username;
+#import "Doctor.h"
+@interface QuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
+-(instancetype)initWithDoctor:(Doctor *)doctor;
 
 @end

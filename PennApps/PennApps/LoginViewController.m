@@ -83,9 +83,9 @@
     self.doctor = [[Api sharedApi] loginWithUsername:userName andPassword:password];
 
     MainBarController *bc = [[MainBarController alloc] init];
-    ConversationViewController *cc = [[ConversationViewController alloc] initWithUsername:@"aep000"];
+    ConversationViewController *cc = [[ConversationViewController alloc] initWithDoctor:self.doctor];
     [bc addChildViewController:cc];
-    QuestionViewController *qc = [[QuestionViewController alloc] initWithUsername:@"aep000"];
+    QuestionViewController *qc = [[QuestionViewController alloc] initWithDoctor:self.doctor];
     [bc addChildViewController:qc];
     [self presentViewController:bc animated:YES completion:nil];
 }

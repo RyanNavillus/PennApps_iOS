@@ -91,6 +91,7 @@ static Api* kSharedApi;
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:&error];
+                NSLog(@"%@",json);
             }
         }];
         
